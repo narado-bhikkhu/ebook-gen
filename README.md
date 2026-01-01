@@ -17,7 +17,7 @@ This tool reads JSON term files exported from the Tibetan Dictionary CLI (`--exp
 ### Prerequisites
 
 - Go 1.21 or later
-- JSON term files in `/workspaces/codespaces-blank/ebook/data/` (from CLI export)
+- JSON term files in `./data/` (from CLI export)
 
 ### Build
 
@@ -34,10 +34,10 @@ go build -o ebook-gen main.go
 
 # Or with custom options
 ./ebook-gen \
-  -input /workspaces/books/ebook/data \
-  -output tibetan-english-dict.epub \
-  -title "Tibetan English Dictionary" \
-  -author "Narado"
+  -input /path/to/json/files \
+  -output my-ebook.epub \
+  -title "My Tibetan Dictionary" \
+  -author "Your Name"
 ```
 
 ## 📖 Usage Examples
@@ -69,7 +69,7 @@ go build -o ebook-gen main.go
 ```
 -input string
     Input directory containing JSON term files
-    (default: /workspaces/codespaces-blank/ebook/data)
+    (default: ./data)
 
 -output string
     Output EPUB file path
@@ -82,9 +82,6 @@ go build -o ebook-gen main.go
 -author string
     Ebook author
     (default: Tibetan Dictionary Project)
-
--workers int
-    Number of concurrent workers when parsing many small JSON files (default: number of CPU cores)
 ```
 
 ## 📦 Output Format
@@ -210,14 +207,8 @@ You can customize styling by editing the CSS in the source code.
 ## 🚀 Performance
 
 - Tested with 100+ terms
-- Processing speed: ~100-1000 terms per second (varies by CPU and I/O)
+- Processing speed: ~100-1000 terms per second
 - Output file size: ~0.5-2 MB per 1000 terms (depends on definition length)
-
-**Large export support & progress reporting** ✅
-
-- The generator now detects a single large aggregated JSON file and processes it in a streaming two-pass mode to avoid loading the whole file into memory (ideal for 600–700MB exports).
-- During streaming the CLI shows live progress (percent of bytes processed) while building metadata and while writing chapters, plus periodic chapter counts.
-- Per-term formats (many small JSON files) are parsed with a small worker pool to speed up I/O-bound workloads and show parsing progress.
 
 ## 📄 License
 
@@ -233,7 +224,7 @@ cd /workspaces/codespaces-blank/tibetan-english-cli
 node dict-cli.js --export-all-terms \
   --export-mode per-term \
   --limit 1000 \
-  --out-dir /workspaces/codespaces-blank/ebook/data
+  --out-dir ./data
 
 # 2. Generate the EPUB ebook
 cd /workspaces/codespaces-blank/ebook
