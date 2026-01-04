@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-01-04T14:05:08.489Z",
+  "searchTerm": {
+    "wylie": "'ang gu",
+    "unicode": "འང་གུ་"
+  },
+  "definitions": {
+    "JimValby": "pigeon་",
+    "bod_yig_tshig_gter_rgya_mtsho": "{འདབ་ཆགས་ཕུག་རོན།}",
+    "tshig-mdzod-chen-mo-Tib": "(ཡུལ) ཕུག་རོན།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ang gu",
+      "unicode": "འང་གུ་"
+    },
+    {
+      "wylie": "'ang gu mdog",
+      "unicode": "འང་གུ་མདོག་"
+    }
+  ],
+  "relatedTermsCount": 2,
+  "definitionsCount": 3
+}

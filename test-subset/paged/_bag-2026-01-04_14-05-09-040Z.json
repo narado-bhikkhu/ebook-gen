@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-01-04T14:05:09.041Z",
+  "searchTerm": {
+    "wylie": "'bag",
+    "unicode": "འབག་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༩༡༦?",
+    "IvesWaldo": "mask་;༡) mask [ཅླཡ་, ཅོཏཏོན་, ཀོ་, པཔེར་བསེ་, པཔེར་maiche་etc.];༣) ཨིམགེ་;༤) replica་;༥) [དིས]guise [past: འབགས་, ཕུ༹ཏུརེ: དབག],, བེ་defiled་, polluted་, desecrated.༡) mask་;༣) ཨིམགེ་;༤) replica་;༥) [དིས]guise [past: འབགས་, ཕུ༹ཏུརེ: དབག],, བེ་defiled་, polluted་, desecrated་",
+    "Jaeschke_Scan": "༤༡༧",
+    "JimValby": "masks་mask་, ཨེཕ༹ཕི༹གཡ་, likeness་, ཕི༹གུརེ་",
+    "NegiSkt": "= {གཟུགས་བརྙན} putrikā, pañcālikā —་pāñcālikā putrikā syādwastradantādibhiḥ kṛtā\n a.ko.༢༠༤ཀ།༢.༡༠.༢༩; putrīva་kṛtrimā putrikā a.vi.༢.༡༠.༢༩།།",
+    "RangjungYeshe": "{འདྲ་འབག} - likeness་; mask\n -- -\nཨིམགེ་, replica་, {འདྲ་འབག་, སྐུ་འབག}. mask་, guise་, disguise\n -- -\nmask་",
+    "RichardBarron": "mask་; {འདྲ་འབག} - likeness་",
+    "bod_yig_tshig_gter_rgya_mtsho": "རྒྱན་ཚིག་",
+    "dag_tshig_gsar_bsgrigs-Tib": "(བྱེད་མེད་ལས་ཚིག་འབགས་པའི་མ་འོངས་པ་དང་ད་ལྟ་བ)༡་ཟས་སོགས་ལ་དངོས་རྫས་མི་གཙང་བ་གཞན་འདྲེས་པའི་དོན་ཏེ། འབག་པར་བྱ། འབག་བཙོག་ཅེས་པ་ལྟ་བུ། (འབགས) ནི་འདས་པ་སྟེ། ཟས་ལ་དྲི་མས་འབགས་ལྟ་བུ།༢. རྒྱུ་ནོར་སོགས་འབྱོར་བའི་དོན་ཏེ། རྒྱུ་ནོར་གྱིས་འབག་རྒྱུ་ནོར་ལ་འབགས་ནའང་དབུལ་སྡུག་མ་བརྗེད་ལྟ་བུ།\n -- -\n༡. འཇིམ་པས་བཟོས་པའི་མི་ཕྱུགས་ཀྱི་འདྲ་གཟུགས་ཀྱི་མིང་སྟེ། འབག་སྐུ། འབག་བཟོ། མགོ་ལ་འབག་གྱོན་ལྟ་བུ།༢. སྙི་མོ་ས་འདམ་མམ་དེ་དང་མཚུངས་པའི་རྣམ་པ་སྟེ། འདམ་འབག་ཕྱེ་འབག་ཐུག་པ་ཧ་ཅང་འབག་ཅེས་པ་ལྟ་བུ།",
+    "dung-dkar-tshig-mdzod-chen-mo-Tib": "འཇིམ་པས་བཟོས་པའམ་ཤོག་བུའི་ཐོག་རི་མོ་བྲིས་པའི་འདྲ་བརྙན་",
+    "hotl2": "[སོཨུནད:༢༤༠༨a.waw]\n{འབག} Mask\n -- -\nExample: [སོཨུནད:༢༤༠༨c.wav]\n {འཆམ་འཁྲབ་མཁན་གྱི་གྲྭ་པ་དེ་ཚོས་འབག་ཞེད་སྣང་ཚ་པོ་གྱོན་གྱི་ཡོད་རེད་པ།} ཋེ་monks་who་དོ་ཐེ་རིཏུཨལ་dances་ཝེཨར་scary་masks་, right?"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bag",
+      "unicode": "འབག་"
+    },
+    {
+      "wylie": "'bag 'big",
+      "unicode": "འབག་འབིག་"
+    },
+    {
+      "wylie": "'bag 'bog",
+      "unicode": "འབག་འབོག་"
+    },
+    {
+      "wylie": "'bag 'bug",
+      "unicode": "འབག་འབུག་"
+    },
+    {
+      "wylie": "'bag 'bug 'bag ge 'bug ge'i bsdus tshig 'bag mo",
+      "unicode": "འབག་འབུག་འབག་གེ་འབུག་གེའི་བསྡུས་ཚིག་འབག་མོ་"
+    },
+    {
+      "wylie": "'bag 'bug med pa",
+      "unicode": "འབག་འབུག་མེད་པ་"
+    },
+    {
+      "wylie": "'bag 'cham",
+      "unicode": "འབག་འཆམ་"
+    },
+    {
+      "wylie": "'bag 'dra",
+      "unicode": "འབག་འདྲ་"
+    },
+    {
+      "wylie": "'bag 'jim pa'am ras bse dang",
+      "unicode": "འབག་འཇིམ་པའམ་རས་བསེ་དང་"
+    },
+    {
+      "wylie": "'bag btsog",
+      "unicode": "འབག་བཙོག་"
+    },
+    {
+      "wylie": "'bag bzlas",
+      "unicode": "འབག་བཟླས་"
+    },
+    {
+      "wylie": "'bag bzo ba",
+      "unicode": "འབག་བཟོ་བ་"
+    },
+    {
+      "wylie": "'bag cha",
+      "unicode": "འབག་ཆ་"
+    },
+    {
+      "wylie": "'bag chas",
+      "unicode": "འབག་ཆས་"
+    },
+    {
+      "wylie": "'bag dang seng ge",
+      "unicode": "འབག་དང་སེང་གེ་"
+    },
+    {
+      "wylie": "'bag g.yon pa",
+      "unicode": "འབག་གཡོན་པ་"
+    },
+    {
+      "wylie": "'bag ge 'bug ge",
+      "unicode": "འབག་གེ་འབུག་གེ་"
+    },
+    {
+      "wylie": "'bag gyon",
+      "unicode": "འབག་གྱོན་"
+    },
+    {
+      "wylie": "'bag gyon pa",
+      "unicode": "འབག་གྱོན་པ་"
+    },
+    {
+      "wylie": "'bag gyon te rgyag pa'i 'cham",
+      "unicode": "འབག་གྱོན་ཏེ་རྒྱག་པའི་འཆམ་"
+    },
+    {
+      "wylie": "'bag ma",
+      "unicode": "འབག་མ་"
+    },
+    {
+      "wylie": "'bag mgo",
+      "unicode": "འབག་མགོ་"
+    },
+    {
+      "wylie": "'bag mo",
+      "unicode": "འབག་མོ་"
+    },
+    {
+      "wylie": "'bag pa",
+      "unicode": "འབག་པ་"
+    },
+    {
+      "wylie": "'bag po",
+      "unicode": "འབག་པོ་"
+    },
+    {
+      "wylie": "'bag rag",
+      "unicode": "འབག་རག་"
+    },
+    {
+      "wylie": "'bag rag gi tshang",
+      "unicode": "འབག་རག་གི་ཚང་"
+    },
+    {
+      "wylie": "'bag sgo",
+      "unicode": "འབག་སྒོ་"
+    },
+    {
+      "wylie": "'bag sku",
+      "unicode": "འབག་སྐུ་"
+    }
+  ],
+  "relatedTermsCount": 29,
+  "definitionsCount": 11
+}

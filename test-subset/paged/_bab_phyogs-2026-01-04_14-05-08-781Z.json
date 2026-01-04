@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-01-04T14:05:08.781Z",
+  "searchTerm": {
+    "wylie": "'bab phyogs",
+    "unicode": "འབབ་ཕྱོགས་"
+  },
+  "definitions": {
+    "IvesWaldo": "༡) downward་falling་དིརེཅཏིཨོན་;༢) སོཨུརཅེ་",
+    "JimValby": "low་པླཅེ་ཨོར་གྲོཨུནད་, དིརེཅཏིཨོན་ཨོཕ༹་ཨ་riwer's་ཕ༹ློཝ་",
+    "bod_yig_tshig_gter_rgya_mtsho": "(༡) {ཐུར་དུ་ལྷུང་བའི་ཕྱོགས།} (༢) {ཡོང་སྒོ།}",
+    "tshig-mdzod-chen-mo-Tib": "༡) ཐུར་དུ་ལྷུང་བའི་ཕྱོགས།༢) ཡོང་སྒོ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bab phyogs",
+      "unicode": "འབབ་ཕྱོགས་"
+    },
+    {
+      "wylie": "'bab phyogs mthun",
+      "unicode": "འབབ་ཕྱོགས་མཐུན་"
+    }
+  ],
+  "relatedTermsCount": 2,
+  "definitionsCount": 4
+}

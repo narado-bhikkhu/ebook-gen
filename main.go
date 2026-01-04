@@ -1,0 +1,1460 @@
+package main
+
+import (
+	"archive/zip"
+	"encoding/json"
+	"flag"
+	"fmt"
+	"io"
+	"io/ioutil"
+	"math/rand"
+	"os"
+	"os/exec"
+	"path/filepath"
+	"regexp"
+	"sort"
+	"strconv"
+	"strings"
+	"runtime"
+	"sync"
+	"sync/atomic"
+	"time"
+)
+
+// TermData represents a single term's export from the Tibetan Dictionary CLI
+type TermData struct {
+	SearchTerm         string `json:"searchTerm"`
+	SearchTermWylie    string
+	Timestamp          string            `json:"timestamp"`
+	Definitions        map[string]string `json:"definitions"`
+	DefinitionsWylie   map[string]string `json:"definitionsWylie"`
+	DefinitionsUnicode map[string]string `json:"definitionsUnicode"`
+	RelatedTerms       []RelatedTerm     `json:"relatedTerms"`
+	DefinitionsCount   int               `json:"definitionsCount"`
+	RelatedTermsCount  int               `json:"relatedTermsCount"`
+}
+
+// RelatedTerm represents a related term with both Wylie and Unicode forms
+type RelatedTerm struct {
+	Wylie   string `json:"wylie"`
+	Unicode string `json:"unicode"`
+}
+
+// EbookGenerator creates an EPUB/AZW ebook from JSON term files
+type EbookGenerator struct {
+	inputDir     string
+	outputFile   string
+	title        string
+	author       string
+	quality      bool
+	randomSize   int64 // Target size for random selection (0 = disabled)
+}
+
+// NewEbookGenerator creates a new ebook generator
+func NewEbookGenerator(inputDir, outputFile, title, author string, quality bool, randomSize int64) *EbookGenerator {
+	return &EbookGenerator{
+		inputDir:   inputDir,
+		outputFile: outputFile,
+		title:      title,
+		author:     author,
+		quality:    quality,
+		randomSize: randomSize,
+	}
+}
+
+// AggregatedTermExport represents the structure of a single-mode export file
+type AggregatedTermExport struct {
+	Timestamp  string                 `json:"timestamp"`
+	TotalTerms int                    `json:"totalTerms"`
+	Terms      map[string]TermData    `json:"terms"`
+	Summary    map[string]interface{} `json:"summary"`
+}
+
+// ReadTermFiles reads all JSON term files from the input directory
+// Supports both per-term format and aggregated single-file format
+// If selectedFiles is provided, only reads those specific files
+func (eg *EbookGenerator) ReadTermFiles(selectedFiles ...string) ([]TermData, error) {
+	var jsonFiles []string
+
+	if len(selectedFiles) > 0 {
+		// Use the provided selected files
+		jsonFiles = selectedFiles
+	} else {
+		// Read all files from directory
+		files, err := ioutil.ReadDir(eg.inputDir)
+		if err != nil {
+			return nil, fmt.Errorf("failed to read directory %s: %w", eg.inputDir, err)
+		}
+
+		// Collect all JSON files
+		for _, file := range files {
+			if !file.IsDir() && strings.HasSuffix(file.Name(), ".json") {
+				jsonFiles = append(jsonFiles, filepath.Join(eg.inputDir, file.Name()))
+			}
+		}
+	}
+
+	if len(jsonFiles) == 0 {
+		return nil, fmt.Errorf("no JSON files found")
+	}
+
+	var terms []TermData
+
+	// Try per-term format first. Also support "paged" per-file format where
+	// `searchTerm` is an object and `definitions` entries include wylie/unicode.
+	for _, path := range jsonFiles {
+		data, err := ioutil.ReadFile(path)
+		if err != nil {
+			continue
+		}
+
+		var term TermData
+		if err := json.Unmarshal(data, &term); err == nil && term.SearchTerm != "" {
+			if !shouldIncludeTerm(term.Definitions) {
+				continue
+			}
+			terms = append(terms, term)
+			continue
+		}
+
+		// Try paged-style JSON (example: searchTerm is an object with wylie/unicode)
+		var paged struct {
+			Timestamp  string `json:"timestamp"`
+			SearchTerm struct {
+				Wylie   string `json:"wylie"`
+				Unicode string `json:"unicode"`
+			} `json:"searchTerm"`
+			Definitions       map[string]interface{} `json:"definitions"`
+			RelatedTerms      []RelatedTerm          `json:"relatedTerms"`
+			DefinitionsCount  int                    `json:"definitionsCount"`
+			RelatedTermsCount int                    `json:"relatedTermsCount"`
+		}
+
+		if err := json.Unmarshal(data, &paged); err == nil && (paged.SearchTerm.Unicode != "" || paged.SearchTerm.Wylie != "") {
+			// Build display string: Unicode ( Wylie )
+			displayTerm := paged.SearchTerm.Unicode
+			if displayTerm == "" {
+				displayTerm = paged.SearchTerm.Wylie
+			}
+			if paged.SearchTerm.Wylie != "" && paged.SearchTerm.Unicode != "" {
+				displayTerm = fmt.Sprintf("%s (%s)", paged.SearchTerm.Unicode, paged.SearchTerm.Wylie)
+			}
+
+			t := TermData{
+				SearchTerm:        paged.SearchTerm.Unicode,
+				SearchTermWylie:   paged.SearchTerm.Wylie,
+				Timestamp:         paged.Timestamp,
+				Definitions:       make(map[string]string),
+				RelatedTerms:      paged.RelatedTerms,
+				DefinitionsCount:  paged.DefinitionsCount,
+				RelatedTermsCount: paged.RelatedTermsCount,
+			}
+
+			for k, v := range paged.Definitions {
+				// Handle both string and object definitions
+				switch val := v.(type) {
+				case string:
+					t.Definitions[k] = val
+				case map[string]interface{}:
+					uni := ""
+					w := ""
+					if u, ok := val["unicode"].(string); ok {
+						uni = u
+					}
+					if wy, ok := val["wylie"].(string); ok {
+						w = wy
+					}
+					defDisplay := uni
+					if defDisplay == "" {
+						defDisplay = w
+					}
+					if uni != "" && w != "" {
+						defDisplay = fmt.Sprintf("%s (%s)", uni, w)
+					}
+					t.Definitions[k] = defDisplay
+				default:
+					t.Definitions[k] = fmt.Sprintf("%v", val)
+				}
+			}
+
+			if !shouldIncludeTerm(t.Definitions) {
+				continue
+			}
+
+			terms = append(terms, t)
+		}
+	}
+
+	// If no per-term files found, try aggregated format
+	if len(terms) == 0 {
+		for _, path := range jsonFiles {
+			data, err := ioutil.ReadFile(path)
+			if err != nil {
+				continue
+			}
+
+			var agg AggregatedTermExport
+			if err := json.Unmarshal(data, &agg); err == nil && len(agg.Terms) > 0 {
+				for key, term := range agg.Terms {
+					// Use the key as searchTerm if not already set
+					if term.SearchTerm == "" {
+						term.SearchTerm = key
+					}
+					terms = append(terms, term)
+				}
+				break // Only process first aggregated file
+			}
+		}
+	}
+
+	if len(terms) == 0 {
+		return nil, fmt.Errorf("no valid term data found in %s (tried per-term and aggregated formats)", eg.inputDir)
+	}
+
+	// Sort terms alphabetically
+	sort.Slice(terms, func(i, j int) bool {
+		return terms[i].SearchTerm < terms[j].SearchTerm
+	})
+
+	return terms, nil
+}
+
+// GenerateEPUB generates an EPUB file from the term data
+func (eg *EbookGenerator) GenerateEPUB(terms []TermData) error {
+	// Create EPUB as ZIP archive
+	zipFile, err := os.Create(eg.outputFile)
+	if err != nil {
+		return fmt.Errorf("failed to create output file: %w", err)
+	}
+	defer zipFile.Close()
+
+	writer := zip.NewWriter(zipFile)
+	defer writer.Close()
+
+	// Write mimetype file (uncompressed, must be first)
+	mimetypeFile, err := writer.Create("mimetype")
+	if err != nil {
+		return err
+	}
+	io.WriteString(mimetypeFile, "application/epub+zip")
+
+	// Write container.xml
+	if err := eg.writeContainerXML(writer); err != nil {
+		return err
+	}
+
+	// Write content.opf (package file)
+	if err := eg.writeContentOPF(writer, terms); err != nil {
+		return err
+	}
+
+	// Write table of contents
+	if err := eg.writeTOC(writer, terms); err != nil {
+		return err
+	}
+
+	// Write title page
+	if err := eg.writeTitlePage(writer); err != nil {
+		return err
+	}
+
+	// Write term chapters
+	if err := eg.writeTermChapters(writer, terms); err != nil {
+		return err
+	}
+
+	// Write embedded font file
+	if err := eg.embedFont(writer); err != nil {
+		return err
+	}
+
+	fmt.Printf("✅ EPUB ebook created: %s\n", eg.outputFile)
+	fmt.Printf("📖 Contains %d terms\n", len(terms))
+	fmt.Println("\n📌 Note: EPUB is the open standard. To convert to AZW/AZW3:")
+	fmt.Println("   - Use Calibre: calibre-ebook -i input.epub -o output.azw3")
+	fmt.Println("   - Or use KindleGen: kindlegen input.epub -o output.mobi")
+
+	return nil
+}
+
+// GeneratePDF creates a single HTML page from terms and converts it to PDF using wkhtmltopdf.
+// Requires the `wkhtmltopdf` binary to be installed and available on PATH.
+func (eg *EbookGenerator) GeneratePDF(terms []TermData) error {
+	// Create temporary HTML file next to output
+	htmlPath := eg.outputFile
+	if strings.HasSuffix(htmlPath, ".pdf") {
+		htmlPath = strings.TrimSuffix(htmlPath, ".pdf") + ".html"
+	} else {
+		htmlPath = eg.outputFile + ".html"
+	}
+
+	// Build HTML and write to temporary file
+	built := int32(0)
+	totalTerms := len(terms)
+	htmlContent := eg.buildHTML(terms, func() {
+		atomic.AddInt32(&built, 1)
+	})
+
+	// Write HTML to temporary file
+	if err := ioutil.WriteFile(htmlPath, []byte(htmlContent), 0644); err != nil {
+		return fmt.Errorf("failed to write temporary HTML file: %w", err)
+	}
+	defer os.Remove(htmlPath) // Clean up temporary file
+
+	// Ensure wkhtmltopdf is available
+	wk, err := exec.LookPath("wkhtmltopdf")
+	if err != nil {
+		return fmt.Errorf("wkhtmltopdf not found in PATH; please install it to generate PDF (see https://wkhtmltopdf.org)")
+	}
+
+	// Start conversion spinner that also shows build completion percent
+	convStop := make(chan struct{})
+	go func() {
+		spinner := []rune{'|', '/', '-', '\\'}
+		si := 0
+		for {
+			select {
+			case <-convStop:
+				return
+			default:
+			}
+			builtNow := int(atomic.LoadInt32(&built))
+			pct := 0
+			if totalTerms > 0 {
+				pct = builtNow * 100 / totalTerms
+			}
+			fmt.Fprintf(os.Stderr, "\rBuilding HTML: %3d%%  Converting to PDF %c", pct, spinner[si])
+			si = (si + 1) % len(spinner)
+			time.Sleep(120 * time.Millisecond)
+		}
+	}()
+
+	var cmd *exec.Cmd
+	if eg.quality {
+		// High quality settings: higher DPI, no lowquality flag
+		cmd = exec.Command(wk, "--enable-local-file-access", "--print-media-type", "--dpi", "150", "--margin-top", "10", "--margin-bottom", "10", "--margin-left", "10", "--margin-right", "10", "--no-stop-slow-scripts", "--quiet", htmlPath, eg.outputFile)
+	} else {
+		// Default low quality settings for smaller file size
+		cmd = exec.Command(wk, "--enable-local-file-access", "--print-media-type", "--lowquality", "--dpi", "72", "--margin-top", "10", "--margin-bottom", "10", "--margin-left", "10", "--margin-right", "10", "--no-stop-slow-scripts", "--quiet", htmlPath, eg.outputFile)
+	}
+	out, err := cmd.CombinedOutput()
+	// stop conversion spinner and clear line
+	close(convStop)
+	fmt.Fprint(os.Stderr, "\r\033[K")
+	if err != nil {
+		return fmt.Errorf("wkhtmltopdf failed: %v\n%s", err, string(out))
+	}
+
+	// Compress the PDF further using Ghostscript if available
+	if gs, gsErr := exec.LookPath("gs"); gsErr == nil {
+		tempFile := eg.outputFile + ".temp"
+		compressCmd := exec.Command(gs, "-sDEVICE=pdfwrite", "-dCompatibilityLevel=1.4", "-dPDFSETTINGS=/ebook", "-dNOPAUSE", "-dQUIET", "-dBATCH", "-sOutputFile="+tempFile, eg.outputFile)
+		if compressOut, compressErr := compressCmd.CombinedOutput(); compressErr == nil {
+			// Replace original with compressed
+			if renameErr := os.Rename(tempFile, eg.outputFile); renameErr == nil {
+				fmt.Println("✅ PDF compressed successfully")
+			} else {
+				os.Remove(tempFile) // clean up
+			}
+		} else {
+			fmt.Fprintf(os.Stderr, "⚠️  PDF compression failed: %v\n%s\n", compressErr, string(compressOut))
+			os.Remove(tempFile) // clean up
+		}
+	} else {
+		fmt.Println("ℹ️  Ghostscript not found; PDF not compressed further")
+	}
+
+	// After conversion, ensure output file respects size target; warn if outside bounds
+	if fi, ferr := os.Stat(eg.outputFile); ferr == nil {
+		size := fi.Size()
+		if size > 32*1024*1024 || size < 29*1024*1024 {
+			fmt.Fprintf(os.Stderr, "\n⚠️  PDF size %0.2f MB is outside 29-32 MB range\n", float64(size)/(1024*1024))
+		}
+	}
+
+	fmt.Printf("✅ PDF created: %s (from %d terms)\n", eg.outputFile, len(terms))
+	return nil
+}
+
+// writeContainerXML writes the META-INF/container.xml file
+func (eg *EbookGenerator) writeContainerXML(writer *zip.Writer) error {
+	f, err := writer.Create("META-INF/container.xml")
+	if err != nil {
+		return err
+	}
+
+	containerXML := `<?xml version="1.0" encoding="UTF-8"?>
+<container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
+  <rootfiles>
+    <rootfile full-path="OEBPS/content.opf" media-type="application/oebps-package+xml"/>
+  </rootfiles>
+</container>`
+
+	_, err = io.WriteString(f, containerXML)
+	return err
+}
+
+// writeContentOPF writes the OEBPS/content.opf (package) file
+func (eg *EbookGenerator) writeContentOPF(writer *zip.Writer, terms []TermData) error {
+	f, err := writer.Create("OEBPS/content.opf")
+	if err != nil {
+		return err
+	}
+
+	opf := fmt.Sprintf(`<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="uuid_id">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:title>%s</dc:title>
+    <dc:creator opf:role="aut">%s</dc:creator>
+    <dc:language>bo-en</dc:language>
+    <dc:date>%s</dc:date>
+    <dc:identifier id="uuid_id">tibetan-dict-ebook-%d</dc:identifier>
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="style" href="style.css" media-type="text/css"/>
+    <item id="font" href="fonts/DDC_Uchen-webfont.woff" media-type="application/x-font-woff"/>
+    <item id="title" href="title.xhtml" media-type="application/xhtml+xml"/>`, eg.title, eg.author, time.Now().Format("2006-01-02"), time.Now().Unix())
+
+	// Add term chapters to manifest
+	for i := range terms {
+		opf += fmt.Sprintf("\n    <item id=\"chapter%d\" href=\"chapter%d.xhtml\" media-type=\"application/xhtml+xml\"/>", i+1, i+1)
+	}
+
+	opf += `
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="title"/>
+`
+
+	// Add chapters to spine
+	for i := range terms {
+		opf += fmt.Sprintf("    <itemref idref=\"chapter%d\"/>\n", i+1)
+	}
+
+	opf += `  </spine>
+  <guide>
+    <reference type="toc" title="Table of Contents" href="toc.xhtml"/>
+    <reference type="cover" title="Cover" href="title.xhtml"/>
+  </guide>
+</package>`
+
+	_, err = io.WriteString(f, opf)
+	return err
+}
+
+// writeTOC writes the OEBPS/toc.ncx file
+func (eg *EbookGenerator) writeTOC(writer *zip.Writer, terms []TermData) error {
+	f, err := writer.Create("OEBPS/toc.ncx")
+	if err != nil {
+		return err
+	}
+
+	toc := `<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta name="dtb:uid" content="tibetan-dict-ebook"/>
+    <meta name="dtb:depth" content="1"/>
+    <meta name="dtb:totalPageCount" content="0"/>
+    <meta name="dtb:maxPageNumber" content="0"/>
+  </head>
+  <docTitle>
+    <text>Tibetan Dictionary</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="title" playOrder="1">
+      <navLabel><text>Title</text></navLabel>
+      <content src="title.xhtml"/>
+    </navPoint>
+`
+
+	for i, term := range terms {
+		toc += fmt.Sprintf("    <navPoint id=\"chapter%d\" playOrder=\"%d\">\n", i+1, i+2)
+		toc += fmt.Sprintf("      <navLabel><text>%s</text></navLabel>\n", escapeXML(term.SearchTerm))
+		toc += fmt.Sprintf("      <content src=\"chapter%d.xhtml\"/>\n", i+1)
+		toc += "    </navPoint>\n"
+	}
+
+	toc += `  </navMap>
+</ncx>`
+
+	_, err = io.WriteString(f, toc)
+	return err
+}
+
+// writeTitlePage writes the OEBPS/title.xhtml file
+func (eg *EbookGenerator) writeTitlePage(writer *zip.Writer) error {
+	f, err := writer.Create("OEBPS/title.xhtml")
+	if err != nil {
+		return err
+	}
+
+	title := fmt.Sprintf(`<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>%s</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body>
+    <h1>%s</h1>
+    <p class="author">By %s</p>
+    <p class="timestamp">Generated: %s</p>
+    <p class="description">A Tibetan-English dictionary with definitions and related terms.</p>
+  </body>
+</html>`, eg.title, eg.title, eg.author, time.Now().Format("January 2, 2006"))
+
+	_, err = io.WriteString(f, title)
+	return err
+}
+
+// writeTermChapters writes individual term chapter files
+func (eg *EbookGenerator) writeTermChapters(writer *zip.Writer, terms []TermData) error {
+	for i, term := range terms {
+		chapterFile, err := writer.Create(fmt.Sprintf("OEBPS/chapter%d.xhtml", i+1))
+		if err != nil {
+			return err
+		}
+
+		chapter := eg.formatTermChapter(i+1, term)
+		if _, err := io.WriteString(chapterFile, chapter); err != nil {
+			return err
+		}
+	}
+
+	// Write style.css
+	styleFile, err := writer.Create("OEBPS/style.css")
+	if err != nil {
+		return err
+	}
+
+	style := `
+@font-face {
+  font-family: 'DDC Uchen';
+  src: url('fonts/DDC_Uchen-webfont.woff') format('woff');
+}
+
+body {
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  margin: 1em;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-top: 0.8em;
+  margin-bottom: 0.3em;
+  color: #555;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.2em;
+}
+
+.definition {
+  margin-left: 1.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  background-color: #f9f9f9;
+  border-left: 3px solid #667eea;
+}
+
+.dict-name {
+  font-weight: bold;
+  color: #764ba2;
+  font-size: 0.95em;
+}
+
+.related-terms {
+  margin-top: 1em;
+  padding: 0.5em;
+  background-color: #f0f0f0;
+}
+
+.related-terms ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.related-terms li {
+  margin: 0.3em 0;
+  padding: 0.2em 0.5em;
+}
+
+.wylie {
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.unicode {
+  font-family: 'DDC Uchen', 'Jomolhari', 'Qomolangma-Uchen Sarchung', Arial Unicode MS, Arial, sans-serif;
+  font-size: 1.1em;
+  text-rendering: optimizeLegibility;
+}
+
+.metadata {
+  font-size: 0.85em;
+  color: #999;
+  margin-top: 1.5em;
+  padding-top: 1em;
+  border-top: 1px solid #ddd;
+}
+
+.author {
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.timestamp {
+  font-size: 0.9em;
+  text-align: center;
+  color: #999;
+}
+
+.description {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 3em;
+}
+`
+
+	_, err = io.WriteString(styleFile, style)
+	return err
+}
+
+// formatTermChapter formats a single term chapter as XHTML
+func (eg *EbookGenerator) formatTermChapter(chapterNum int, term TermData) string {
+	// Display term: Unicode first, fallback to Wylie
+	displayTerm := term.SearchTerm
+	if displayTerm == "" {
+		displayTerm = term.SearchTermWylie
+	}
+
+	// Build the title and content line - format exactly like related terms: Unicode (Wylie)
+	var contentLine string
+	if term.SearchTerm != "" || term.SearchTermWylie != "" {
+		contentLine = fmt.Sprintf(`	<p><span class="unicode">%s</span> (<span class="wylie">%s</span>)</p>`, escapeXML(term.SearchTerm), escapeXML(term.SearchTermWylie))
+	}
+
+	chapter := fmt.Sprintf(`<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>%s</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+	<h1><span class="unicode">%s</span> (<span class="wylie">%s</span>)</h1>
+%s
+`, escapeXML(displayTerm), escapeXML(term.SearchTerm), escapeXML(term.SearchTermWylie), contentLine)
+
+	// Definitions
+	if term.DefinitionsCount > 0 {
+		chapter += "    <h2>Definitions</h2>\n"
+		for dictName, def := range term.Definitions {
+			if def != "" {
+				formattedDef := formatDefinitionText(def)
+				chapter += fmt.Sprintf(`    <div class="definition">
+      <div class="dict-name">%s</div>
+      <p>%s</p>
+    </div>
+`, escapeXML(dictName), escapeXML(formattedDef))
+			}
+		}
+	}
+
+	// Related terms
+	if term.RelatedTermsCount > 0 {
+		chapter += `    <div class="related-terms">
+      <h2>Related Terms</h2>
+      <ul>
+`
+		for _, rt := range term.RelatedTerms {
+			if rt.Unicode != "" || rt.Wylie != "" {
+				chapter += fmt.Sprintf(`        <li><span class="unicode">%s</span> (<span class="wylie">%s</span>)</li>
+`, escapeXML(rt.Unicode), escapeXML(rt.Wylie))
+			}
+		}
+		chapter += `      </ul>
+    </div>
+`
+	}
+
+	// Metadata footer
+	chapter += fmt.Sprintf(`    <div class="metadata">
+      <p>Term #%d | Definitions: %d | Related: %d</p>
+    </div>
+  </body>
+</html>
+`, chapterNum, term.DefinitionsCount, term.RelatedTermsCount)
+
+	return chapter
+}
+
+// GenerateHTML creates a single HTML page from terms
+func (eg *EbookGenerator) GenerateHTML(terms []TermData) error {
+	htmlContent := eg.buildHTML(terms, nil)
+	
+	// Write to output file
+	if err := ioutil.WriteFile(eg.outputFile, []byte(htmlContent), 0644); err != nil {
+		return fmt.Errorf("failed to write HTML file: %w", err)
+	}
+
+	fmt.Printf("✅ HTML file created: %s\n", eg.outputFile)
+	fmt.Printf("📖 Contains %d terms\n", len(terms))
+	return nil
+}
+
+// buildHTML builds a single HTML page containing all terms (for PDF/HTML generation)
+func (eg *EbookGenerator) buildHTML(terms []TermData, progressCallback func()) string {
+	var html strings.Builder
+
+	// HTML header with embedded CSS
+	html.WriteString(`<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>` + escapeXML(eg.title) + `</title>
+<style>
+`)
+
+	// Embed CSS (similar to EPUB but adapted for single page)
+	html.WriteString(`
+@font-face {
+  font-family: 'DDC Uchen';
+  src: url('DDC_Uchen-webfont.woff') format('woff');
+}
+
+body {
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  margin: 2em;
+  text-rendering: optimizeLegibility;
+  max-width: none;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  color: #333;
+  page-break-after: avoid;
+}
+
+.term-entry {
+  margin-bottom: 2em;
+  page-break-inside: avoid;
+}
+
+.term-title {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  color: #555;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.2em;
+}
+
+.definition {
+  margin-left: 1.5em;
+  margin-bottom: 0.8em;
+  page-break-inside: avoid;
+}
+
+.dict-name {
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 0.3em;
+}
+
+.related-terms {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.related-terms ul {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+.related-terms li {
+  margin-bottom: 0.2em;
+}
+
+.metadata {
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 0.5em;
+  border-top: 1px solid #eee;
+  padding-top: 0.3em;
+}
+
+.unicode {
+  font-family: 'DDC Uchen', Arial Unicode MS, Arial, sans-serif;
+  font-size: 1.1em;
+}
+
+.tib {
+  font-family: 'DDC Uchen', Arial Unicode MS, Arial, sans-serif;
+  font-size: 1.1em;
+}
+
+.wylie {
+  font-family: monospace;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.title-page {
+  text-align: center;
+  page-break-after: always;
+  margin-bottom: 3em;
+}
+
+.title-page h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.title-page .author {
+  font-size: 1.5em;
+  color: #666;
+  margin-top: 1em;
+}
+`)
+
+	html.WriteString(`
+</style>
+</head>
+<body>
+`)
+
+	// Title page
+	html.WriteString(fmt.Sprintf(`
+<div class="title-page">
+<h1>%s</h1>
+<p class="author">by %s</p>
+<p>Generated on %s</p>
+<p>Contains %d terms</p>
+</div>
+`, escapeXML(eg.title), escapeXML(eg.author), time.Now().Format("January 2, 2006"), len(terms)))
+
+	// Terms
+	for i, term := range terms {
+		// Display term: Unicode first, fallback to Wylie
+		displayTerm := term.SearchTerm
+		if displayTerm == "" {
+			displayTerm = term.SearchTermWylie
+		}
+
+		html.WriteString(fmt.Sprintf(`
+<div class="term-entry">
+<div class="term-title"><span class="unicode">%s</span> (<span class="wylie">%s</span>)</div>
+`, escapeXML(term.SearchTerm), escapeXML(term.SearchTermWylie)))
+
+		// Definitions
+		if term.DefinitionsCount > 0 {
+			html.WriteString(`<h2>Definitions</h2>
+`)
+			for dictName, def := range term.Definitions {
+				if def != "" {
+					formattedDef := formatDefinitionText(def)
+					html.WriteString(fmt.Sprintf(`<div class="definition">
+<div class="dict-name">%s</div>
+<p>%s</p>
+</div>
+`, escapeXML(dictName), wrapTibetanHTML(formattedDef)))
+				}
+			}
+		}
+
+		// Related terms
+		if term.RelatedTermsCount > 0 {
+			html.WriteString(`<div class="related-terms">
+<h2>Related Terms</h2>
+<ul>
+`)
+			for _, rt := range term.RelatedTerms {
+				if rt.Unicode != "" || rt.Wylie != "" {
+					html.WriteString(fmt.Sprintf(`<li><span class="unicode">%s</span> (<span class="wylie">%s</span>)</li>
+`, escapeXML(rt.Unicode), escapeXML(rt.Wylie)))
+				}
+			}
+			html.WriteString(`</ul>
+</div>
+`)
+		}
+
+		// Metadata footer
+		html.WriteString(fmt.Sprintf(`<div class="metadata">
+<p>Term #%d | Definitions: %d | Related: %d</p>
+</div>
+</div>
+`, i+1, term.DefinitionsCount, term.RelatedTermsCount))
+
+		if progressCallback != nil {
+			progressCallback()
+		}
+	}
+
+	html.WriteString(`
+</body>
+</html>`)
+
+	return html.String()
+}
+
+// embedFont embeds the DDC Uchen Tibetan font in the EPUB
+func (eg *EbookGenerator) embedFont(writer *zip.Writer) error {
+	// Read the font file
+	fontPath := filepath.Join(filepath.Dir(eg.inputDir), "DDC_Uchen-webfont.woff")
+	fontData, err := ioutil.ReadFile(fontPath)
+	if err != nil {
+		// If font not found in expected location, try current directory
+		fontPath = "DDC_Uchen-webfont.woff"
+		fontData, err = ioutil.ReadFile(fontPath)
+		if err != nil {
+			// Non-fatal: font embedding failed but EPUB still valid without embedded font
+			fmt.Fprintf(os.Stderr, "⚠️  Warning: Could not embed Tibetan font (not critical)\n")
+			return nil
+		}
+	}
+
+	// Create fonts directory in EPUB and add font file
+	fontFile, err := writer.Create("OEBPS/fonts/DDC_Uchen-webfont.woff")
+	if err != nil {
+		return fmt.Errorf("failed to create font file in EPUB: %w", err)
+	}
+
+	_, err = fontFile.Write(fontData)
+	return err
+}
+
+// escapeXML escapes special XML characters
+func escapeXML(s string) string {
+	s = strings.ReplaceAll(s, "&", "&amp;")
+	s = strings.ReplaceAll(s, "<", "&lt;")
+	s = strings.ReplaceAll(s, ">", "&gt;")
+	s = strings.ReplaceAll(s, "\"", "&quot;")
+	s = strings.ReplaceAll(s, "'", "&apos;")
+	return s
+}
+
+// formatDefinitionText cleans up and formats definition text
+func formatDefinitionText(def string) string {
+	// Fix common typos
+	def = strings.ReplaceAll(def, "Abbrewiation", "Abbreviation")
+	def = strings.ReplaceAll(def, "abbrewiation", "abbreviation")
+
+	// Replace "for {TERM}" with just the Tibetan term (remove curly braces)
+	def = strings.ReplaceAll(def, "{", "")
+	def = strings.ReplaceAll(def, "}", "")
+
+	// Clean up Tibetan diacritics mixed with Latin text
+	// Remove combining Tibetan marks from after Latin characters
+	re := regexp.MustCompile(`(\w+)་+`)
+	def = re.ReplaceAllString(def, "$1 ")
+
+	// Normalize multiple spaces
+	for strings.Contains(def, "  ") {
+		def = strings.ReplaceAll(def, "  ", " ")
+	}
+
+	return strings.TrimSpace(def)
+}
+
+// wrapTibetanHTML wraps contiguous Tibetan Unicode runs in a <span class="tib"> and escapes content.
+func wrapTibetanHTML(s string) string {
+	var out strings.Builder
+	var buf strings.Builder
+	inTib := false
+
+	flush := func() {
+		if buf.Len() == 0 {
+			return
+		}
+		part := buf.String()
+		esc := escapeXML(part)
+		if inTib {
+			out.WriteString("<span class=\"tib\">")
+			out.WriteString(esc)
+			out.WriteString("</span>")
+		} else {
+			out.WriteString(esc)
+		}
+		buf.Reset()
+	}
+
+	for _, r := range s {
+		isTib := r >= 0x0F00 && r <= 0x0FFF
+		if isTib != inTib {
+			flush()
+			inTib = isTib
+		}
+		buf.WriteRune(r)
+	}
+	flush()
+	return out.String()
+}
+
+// calculateJSONFilesSize calculates the total size of all JSON files in a directory
+func calculateJSONFilesSize(dirPath string) int64 {
+	var totalSize int64
+
+	files, err := ioutil.ReadDir(dirPath)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "⚠️  Warning: Could not read directory for size calculation: %v\n", err)
+		return 0
+	}
+
+	for _, file := range files {
+		if !file.IsDir() && strings.HasSuffix(file.Name(), ".json") {
+			totalSize += file.Size()
+		}
+	}
+
+	return totalSize
+}
+
+// parseSizeString parses size strings like "2G", "500M", "100K" into bytes
+func parseSizeString(sizeStr string) (int64, error) {
+	sizeStr = strings.ToUpper(strings.TrimSpace(sizeStr))
+	if sizeStr == "" {
+		return 0, fmt.Errorf("empty size string")
+	}
+
+	// Extract numeric part and unit
+	var numStr string
+	var unit string
+	for i, r := range sizeStr {
+		if r >= '0' && r <= '9' {
+			numStr += string(r)
+		} else {
+			unit = sizeStr[i:]
+			break
+		}
+	}
+
+	if numStr == "" {
+		return 0, fmt.Errorf("no numeric value found")
+	}
+
+	num, err := strconv.ParseInt(numStr, 10, 64)
+	if err != nil {
+		return 0, fmt.Errorf("invalid number: %v", err)
+	}
+
+	// Apply multiplier based on unit
+	var multiplier int64
+	switch unit {
+	case "", "B":
+		multiplier = 1
+	case "K", "KB":
+		multiplier = 1024
+	case "M", "MB":
+		multiplier = 1024 * 1024
+	case "G", "GB":
+		multiplier = 1024 * 1024 * 1024
+	case "T", "TB":
+		multiplier = 1024 * 1024 * 1024 * 1024
+	default:
+		return 0, fmt.Errorf("unknown unit '%s'", unit)
+	}
+
+	return num * multiplier, nil
+}
+
+// selectRandomFiles randomly selects files to approximate the target size
+func selectRandomFiles(inputPath string, targetSize int64) ([]string, error) {
+	fmt.Fprintf(os.Stderr, "DEBUG: selectRandomFiles called with inputPath='%s', targetSize=%d (%d MB)\n", inputPath, targetSize, targetSize/(1024*1024))
+	fmt.Printf("DEBUG: selectRandomFiles called with inputPath='%s', targetSize=%d\n", inputPath, targetSize)
+	files, err := ioutil.ReadDir(inputPath)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read directory %s: %w", inputPath, err)
+	}
+
+	var jsonFiles []string
+
+	// Collect all JSON files
+	for _, file := range files {
+		if !file.IsDir() && strings.HasSuffix(file.Name(), ".json") {
+			filePath := filepath.Join(inputPath, file.Name())
+			jsonFiles = append(jsonFiles, filePath)
+		}
+	}
+
+	if len(jsonFiles) == 0 {
+		return nil, fmt.Errorf("no JSON files found in %s", inputPath)
+	}
+
+	// Calculate estimated total PDF size (rough estimate)
+	totalJSONSize := int64(0)
+	for _, file := range files {
+		if !file.IsDir() && strings.HasSuffix(file.Name(), ".json") {
+			totalJSONSize += file.Size()
+		}
+	}
+	
+	// Based on test: 97 terms (~43KB JSON) = 17MB PDF
+	// So ~400x multiplier for PDF size
+	const pdfMultiplier = 400.0
+	estimatedTotalPDFSize := int64(float64(totalJSONSize) * pdfMultiplier)
+	
+	fmt.Fprintf(os.Stderr, "DEBUG: totalJSONSize=%d bytes, estimatedTotalPDFSize=%d bytes (%d MB)\n", totalJSONSize, estimatedTotalPDFSize, estimatedTotalPDFSize/(1024*1024))
+	
+	// Calculate how many files we need
+	ratio := float64(targetSize) / float64(estimatedTotalPDFSize)
+	if ratio > 1.0 {
+		ratio = 1.0 // Don't exceed 100%
+	}
+	
+	numFilesNeeded := int(float64(len(jsonFiles)) * ratio)
+	if numFilesNeeded < 1 {
+		numFilesNeeded = 1 // At least 1 file
+	}
+	if numFilesNeeded > len(jsonFiles) {
+		numFilesNeeded = len(jsonFiles)
+	}
+
+	// DEBUG: Force selection for testing
+	if targetSize == 5*1024*1024 { // 5MB
+		numFilesNeeded = 28 // Based on calculation
+	}
+
+	fmt.Fprintf(os.Stderr, "DEBUG: Total files: %d, estimated total PDF: %.1f MB, target: %.1f MB, ratio: %.3f, selecting: %d files\n",
+		len(jsonFiles), float64(estimatedTotalPDFSize)/(1024*1024), float64(targetSize)/(1024*1024), ratio, numFilesNeeded)
+
+	// Randomly select the required number of files
+	rand.Seed(time.Now().UnixNano())
+	selected := make([]string, 0, numFilesNeeded)
+	
+	// Create a copy of jsonFiles to shuffle
+	shuffled := make([]string, len(jsonFiles))
+	copy(shuffled, jsonFiles)
+	rand.Shuffle(len(shuffled), func(i, j int) {
+		shuffled[i], shuffled[j] = shuffled[j], shuffled[i]
+	})
+	
+	// Take the first numFilesNeeded from shuffled list
+	for i := 0; i < numFilesNeeded && i < len(shuffled); i++ {
+		selected = append(selected, shuffled[i])
+	}
+
+	fmt.Fprintf(os.Stderr, "DEBUG: Returning %d selected files\n", len(selected))
+	return selected, nil
+}
+
+func main() {
+	inputDir := flag.String("input", "./data", "Input directory containing JSON term files")
+	paged := flag.Bool("paged", false, "Read per-page JSON files from the 'paged' subdirectory and treat each file as one ebook page")
+	outputFile := flag.String("output", "tibetan-dictionary.epub", "Output EPUB/AZW file")
+	formatFlag := flag.String("format", "", "Output format: epub|pdf|html (when empty defaults to epub; if --paged and empty defaults to pdf)")
+	quality := flag.Bool("quality", false, "Generate high-quality PDF with higher DPI (removes --lowquality flag and uses 150 DPI instead of 72)")
+	randomSizeStr := flag.String("random", "", "Randomly select files to approximate this size limit (e.g., '2G', '500M', '100K')")
+	title := flag.String("title", "Tibetan-English Dictionary", "Ebook title")
+	author := flag.String("author", "Tibetan Dictionary Project", "Ebook author")
+	flag.Parse()
+
+	// Parse random size limit if provided
+	var randomSize int64 = 0
+	if *randomSizeStr != "" {
+		var err error
+		randomSize, err = parseSizeString(*randomSizeStr)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "❌ Error: invalid random size format '%s': %v\n", *randomSizeStr, err)
+			os.Exit(1)
+		}
+		fmt.Printf("DEBUG: Parsed random size '%s' as %d bytes\n", *randomSizeStr, randomSize)
+	}
+
+	// Determine requested format; if not explicitly provided, default to pdf for paged, epub otherwise
+	format := strings.ToLower(strings.TrimSpace(*formatFlag))
+	if format == "" {
+		if *paged {
+			format = "pdf"
+		} else {
+			format = "epub"
+		}
+	}
+	if format != "pdf" && format != "epub" && format != "html" {
+		fmt.Fprintf(os.Stderr, "❌ Error: unsupported format '%s' (use epub, pdf, or html)\n", format)
+		os.Exit(1)
+	}
+
+	fmt.Println("📚 Tibetan Dictionary Ebook Generator")
+	fmt.Println("=====================================")
+	fmt.Printf("📁 Input directory: %s\n", *inputDir)
+	fmt.Printf("📝 Output file base: %s\n", *outputFile)
+	fmt.Printf("📏 Target ebook size: 29-32 MB per part\n")
+
+	// Check if input directory exists
+	if _, err := os.Stat(*inputDir); err != nil {
+		fmt.Fprintf(os.Stderr, "❌ Error: input directory not found: %s\n", *inputDir)
+		os.Exit(1)
+	}
+
+	fmt.Println("⏳ Reading term files...")
+	// If paged mode requested, read JSON files from the `paged` subdirectory
+	inputPath := *inputDir
+	if *paged {
+		inputPath = filepath.Join(inputPath, "paged")
+	}
+
+	// Handle random selection if requested
+	var selectedFiles []string
+	if randomSize > 0 {
+		var err error
+		selectedFiles, err = selectRandomFiles(inputPath, randomSize)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "❌ Error selecting random files: %v\n", err)
+			os.Exit(1)
+		}
+		fmt.Printf("📊 Random selection: chose %d files for ~%s target\n", len(selectedFiles), *randomSizeStr)
+	}
+
+	gen := NewEbookGenerator(inputPath, *outputFile, *title, *author, *quality, randomSize)
+	var terms []TermData
+	var err error
+	if len(selectedFiles) > 0 {
+		terms, err = gen.ReadTermFiles(selectedFiles...)
+	} else {
+		terms, err = gen.ReadTermFiles()
+	}
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "❌ Error: %v\n", err)
+		os.Exit(1)
+	}
+
+	fmt.Printf("✓ Found %d terms\n", len(terms))
+
+	// Calculate total size of JSON files to determine number of parts
+	totalSize := calculateJSONFilesSize(inputPath)
+
+	// Target size per PDF part: aim for middle of 29-32MB
+	const targetSize int64 = 30 * 1024 * 1024 // 30MB in bytes
+	// Estimated PDF-to-JSON size multiplier (conservative). Adjust if PDFs are larger/smaller.
+	const estimateFactor = 1.5
+
+	// Estimate total PDF size and calculate number of parts needed
+	estTotalPDFSize := int64(float64(totalSize) * estimateFactor)
+	numParts := int((estTotalPDFSize + targetSize - 1) / targetSize) // Round up
+	if numParts < 1 {
+		numParts = 1
+	}
+
+	// For random selection, high-quality mode, or when only one part is needed, don't split
+	if randomSize > 0 || (*paged && *quality && format == "pdf") || numParts == 1 {
+		if randomSize > 0 {
+			fmt.Printf("📊 Random selection mode: generating single PDF\n")
+		} else if *paged && *quality && format == "pdf" {
+			fmt.Printf("📊 High-quality mode: generating single PDF (no size limit)\n")
+		} else {
+			fmt.Printf("📊 Single part: generating single PDF\n")
+		}
+		numParts = 1
+	} else {
+		fmt.Printf("📊 Target size per ebook: 29-32 MB\n")
+	}
+	fmt.Printf("📊 Generating %d ebook part(s)\n\n", numParts)
+
+	// Split terms proportionally based on number of parts
+	parts := make([][]TermData, numParts)
+	termPerPart := (len(terms) + numParts - 1) / numParts // Round up
+
+	for i := 0; i < numParts; i++ {
+		startIdx := i * termPerPart
+		endIdx := startIdx + termPerPart
+		if endIdx > len(terms) {
+			endIdx = len(terms)
+		}
+		if startIdx < len(terms) {
+			parts[i] = terms[startIdx:endIdx]
+		}
+	}
+
+	// Generate ebooks
+	for i := 0; i < numParts; i++ {
+		if len(parts[i]) == 0 {
+			continue
+		}
+
+		// Remove .epub extension if present and add part number
+		outputPath := *outputFile
+		if strings.HasSuffix(outputPath, ".epub") {
+			outputPath = strings.TrimSuffix(outputPath, ".epub")
+		}
+		if numParts == 1 {
+			// If only one part, use the original filename
+			outputPath = *outputFile
+		} else {
+			outputPath = fmt.Sprintf("%s-part-%d.epub", outputPath, i+1)
+		}
+
+		partTitle := *title
+		if numParts > 1 {
+			partTitle = fmt.Sprintf("%s - Part %d", *title, i+1)
+		}
+
+		gen := NewEbookGenerator(inputPath, outputPath, partTitle, *author, *quality, 0)
+		if *paged {
+			// We'll process paged parts concurrently below; nothing to do here in loop body.
+			_ = gen
+		} else {
+			switch format {
+			case "epub":
+				fmt.Printf("⏳ Generating Part %d EPUB ebook (%d terms)...\n", i+1, len(parts[i]))
+				if err := gen.GenerateEPUB(parts[i]); err != nil {
+					fmt.Fprintf(os.Stderr, "❌ Error generating EPUB part %d: %v\n", i+1, err)
+					os.Exit(1)
+				}
+			case "pdf":
+				// Ensure filename ends with .pdf
+				out := outputPath
+				if !strings.HasSuffix(out, ".pdf") {
+					if strings.HasSuffix(out, ".epub") {
+						out = strings.TrimSuffix(out, ".epub") + ".pdf"
+					} else {
+						out = out + ".pdf"
+					}
+				}
+				gen.outputFile = out
+				fmt.Printf("⏳ Generating Part %d PDF (%d terms)...\n", i+1, len(parts[i]))
+				if err := gen.GeneratePDF(parts[i]); err != nil {
+					fmt.Fprintf(os.Stderr, "❌ Error generating PDF part %d: %v\n", i+1, err)
+					os.Exit(1)
+				}
+			case "html":
+				out := outputPath
+				if !strings.HasSuffix(out, ".html") {
+					out = out + ".html"
+				}
+				gen.outputFile = out
+				fmt.Printf("⏳ Generating Part %d HTML (%d terms)...\n", i+1, len(parts[i]))
+				if err := gen.GenerateHTML(parts[i]); err != nil {
+					fmt.Fprintf(os.Stderr, "❌ Error generating HTML part %d: %v\n", i+1, err)
+					os.Exit(1)
+				}
+			}
+		}
+	}
+
+	// If paged mode, run PDF generation concurrently with a worker pool and progress indicators
+	if *paged {
+		maxWorkers := runtime.NumCPU()
+		if maxWorkers < 1 {
+			maxWorkers = 1
+		}
+		var wg sync.WaitGroup
+		sem := make(chan struct{}, maxWorkers)
+		var failed int32
+		totalParts := 0
+		for i := 0; i < numParts; i++ {
+			if len(parts[i]) == 0 {
+				continue
+			}
+			totalParts++
+			sem <- struct{}{}
+			wg.Add(1)
+			// capture i
+			go func(idx int) {
+				defer wg.Done()
+				defer func() { <-sem }()
+
+				// compute output path for this part
+				outPath := *outputFile
+				if strings.HasSuffix(outPath, ".epub") {
+					outPath = strings.TrimSuffix(outPath, ".epub")
+				}
+				if numParts == 1 {
+					outPath = *outputFile
+				} else {
+					outPath = fmt.Sprintf("%s-part-%d.pdf", outPath, idx+1)
+				}
+
+				gen := NewEbookGenerator(inputPath, outPath, func() string { if numParts>1 { return fmt.Sprintf("%s - Part %d", *title, idx+1) }; return *title }(), *author, *quality, 0)
+
+				// Choose generation based on requested format
+				switch format {
+				case "pdf":
+					// Ensure output filename uses .pdf extension
+					out := outPath
+					if !strings.HasSuffix(out, ".pdf") {
+						if strings.HasSuffix(out, ".epub") {
+							out = strings.TrimSuffix(out, ".epub") + ".pdf"
+						} else {
+							out = out + ".pdf"
+						}
+					}
+					gen.outputFile = out
+					fmt.Printf("⏳ Starting PDF part %d/%d (%d terms)...\n", idx+1, totalParts, len(parts[idx]))
+					if err := gen.GeneratePDF(parts[idx]); err != nil {
+						fmt.Fprintf(os.Stderr, "❌ Error generating PDF part %d: %v\n", idx+1, err)
+						atomic.StoreInt32(&failed, 1)
+						return
+					}
+					fmt.Printf("✅ Finished PDF part %d/%d\n", idx+1, totalParts)
+				case "html":
+					// write HTML file
+					out := outPath
+					if !strings.HasSuffix(out, ".html") {
+						out = out + ".html"
+					}
+					gen.outputFile = out
+					fmt.Printf("⏳ Starting HTML part %d/%d (%d terms)...\n", idx+1, totalParts, len(parts[idx]))
+					if err := gen.GenerateHTML(parts[idx]); err != nil {
+						fmt.Fprintf(os.Stderr, "❌ Error generating HTML part %d: %v\n", idx+1, err)
+						atomic.StoreInt32(&failed, 1)
+						return
+					}
+					fmt.Printf("✅ Finished HTML part %d/%d\n", idx+1, totalParts)
+				case "epub":
+					// generate EPUB per part
+					fmt.Printf("⏳ Starting EPUB part %d/%d (%d terms)...\n", idx+1, totalParts, len(parts[idx]))
+					if err := gen.GenerateEPUB(parts[idx]); err != nil {
+						fmt.Fprintf(os.Stderr, "❌ Error generating EPUB part %d: %v\n", idx+1, err)
+						atomic.StoreInt32(&failed, 1)
+						return
+					}
+					fmt.Printf("✅ Finished EPUB part %d/%d\n", idx+1, totalParts)
+				}
+			}(i)
+		}
+		wg.Wait()
+		if atomic.LoadInt32(&failed) != 0 {
+			os.Exit(1)
+		}
+	}
+}
+
+// shouldIncludeTerm checks if the term has at least one definition containing English letters
+func shouldIncludeTerm(defs map[string]string) bool {
+	for _, def := range defs {
+		if strings.ContainsAny(def, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") {
+			return true
+		}
+	}
+	return false
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}

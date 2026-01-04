@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-01-04T14:05:08.720Z",
+  "searchTerm": {
+    "wylie": "'ba' zhig",
+    "unicode": "འབའ་ཞིག་"
+  },
+  "definitions": {
+    "Bialek": "༡) alone་, mere་;༢) ཨོནལཡ་",
+    "ChandraDas_Scan": "༩༡༨",
+    "Hopkins-Skt1992": "[C]kewalam་; [MSA]kevala་",
+    "Hopkins-Skt2015": "[C]kewalam་; [MSA]kevala་",
+    "Hopkins2015": "ཨོནལཡ་; སོལེ་; alone་; soley་",
+    "IvesWaldo": "༡) ཇུསཏ་;༢) ཨོནལཡ་;༣) exclusiwe[ly];༤) unique་;༥) སོལེ[ly], purely་;༦) alone་;༧) ཨ་fruit.༡) exclusive་;༢) ཨོནལཡ་;༣) unique་;༤) alone་",
+    "Jaeschke_Scan": "༤༡༧",
+    "JimValby": "ཨོནལཡ་, solely་, alone་",
+    "NegiSkt": "= {འབའ་ཞིག་པ།}",
+    "RangjungYeshe": "ཇུསཏ་, ཨོནལཡ་, exclusiwely་, unique་, solely་, alone་, སིངླེ\n -- -\nཨོནལཡ་, exclusively་, unique\n -- -\n{སྙིང་རྗེ་འབའ་ཞིག་བསྒོམ་པ} cultivating་solely་ཅོམཔསསིཨོན\n -- -\n{ཡོན་ཏན་འབའ་ཞིག་ལ་བསམས} thinking་ཨོནལཡ་ཨོཕ༹་ཧིས་virtues་",
+    "Yoghacharabhumi-glossary": "kewala. n^anyatra་",
+    "bod_yig_tshig_gter_rgya_mtsho": "{ཁོ་ནའམ་རྐྱང་རྐྱང་།} {རྒྱ་ཡིག་འབའ་ཞིག} {བོད་སྐད་འབའ་ཡིག་ལས་མི་ཤེས།} {ཕན་སེམས་འབའ་ཞིག་བཅངས་པ།}",
+    "dag_tshig_gsar_bsgrigs-Tib": "གཅིག་པུ་དང་རྐྱང་བའམ་སླད་མེད་པ་སོགས་ཀྱི་དོན་ཏེ། རྡོ་འབའ་ཞིག་གིས་རྩིག་པ་བརྒྱབ་ནས་རྩྭ་ར་བརྩིགས། ལུག་འབའ་ཞིག་འཚོ། བདེ་སྐྱིད་ཀྱི་འཚོ་བ་འབའ་ཞིག་སྤྱད་ལྟ་བུ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ba' zhig",
+      "unicode": "འབའ་ཞིག་"
+    },
+    {
+      "wylie": "'ba' zhig gi don",
+      "unicode": "འབའ་ཞིག་གི་དོན་"
+    },
+    {
+      "wylie": "'ba' zhig gis",
+      "unicode": "འབའ་ཞིག་གིས་"
+    },
+    {
+      "wylie": "'ba' zhig kho na'am rkyang rkyang",
+      "unicode": "འབའ་ཞིག་ཁོ་ནའམ་རྐྱང་རྐྱང་"
+    },
+    {
+      "wylie": "'ba' zhig mngon dga' zhing",
+      "unicode": "འབའ་ཞིག་མངོན་དགའ་ཞིང་"
+    },
+    {
+      "wylie": "'ba' zhig pa",
+      "unicode": "འབའ་ཞིག་པ་"
+    },
+    {
+      "wylie": "'ba' zhig pa dgu bcu'i nang gses",
+      "unicode": "འབའ་ཞིག་པ་དགུ་བཅུའི་ནང་གསེས་"
+    },
+    {
+      "wylie": "'ba' zhig po",
+      "unicode": "འབའ་ཞིག་པོ་"
+    },
+    {
+      "wylie": "'ba' zhig tu",
+      "unicode": "འབའ་ཞིག་ཏུ་"
+    },
+    {
+      "wylie": "'ba' zhig tu gyur pa",
+      "unicode": "འབའ་ཞིག་ཏུ་གྱུར་པ་"
+    },
+    {
+      "wylie": "'ba' zhig tu ma zad pa",
+      "unicode": "འབའ་ཞིག་ཏུ་མ་ཟད་པ་"
+    },
+    {
+      "wylie": "'ba' zhig tu zad",
+      "unicode": "འབའ་ཞིག་ཏུ་ཟད་"
+    }
+  ],
+  "relatedTermsCount": 12,
+  "definitionsCount": 13
+}

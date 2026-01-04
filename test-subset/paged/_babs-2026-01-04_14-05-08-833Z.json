@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-01-04T14:05:08.834Z",
+  "searchTerm": {
+    "wylie": "'babs",
+    "unicode": "འབབས་"
+  },
+  "definitions": {
+    "Hopkins-TibetanTenses2015": "འབབ། འབབས། བབ། བབས།",
+    "Hopkins2015": "descend་; རཻན་; ཕ༹ློཝ་; ཕ༹ལལ་དོཝན་; mowe་downward་; slope་ཏོཝརད་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'babs",
+      "unicode": "འབབས་"
+    },
+    {
+      "wylie": "'babs kha blangs",
+      "unicode": "འབབས་ཁ་བླངས་"
+    },
+    {
+      "wylie": "'babs pa",
+      "unicode": "འབབས་པ་"
+    },
+    {
+      "wylie": "'babs sgo",
+      "unicode": "འབབས་སྒོ་"
+    },
+    {
+      "wylie": "'babs thang",
+      "unicode": "འབབས་ཐང་"
+    }
+  ],
+  "relatedTermsCount": 5,
+  "definitionsCount": 2
+}

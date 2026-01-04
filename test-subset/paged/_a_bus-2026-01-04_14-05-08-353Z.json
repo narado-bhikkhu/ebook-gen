@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-01-04T14:05:08.355Z",
+  "searchTerm": {
+    "wylie": "'a 'bus",
+    "unicode": "འ་འབུས་"
+  },
+  "definitions": {
+    "JimValby": "ཨི་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'a 'bus",
+      "unicode": "འ་འབུས་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 1
+}

@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-01-04T14:05:08.914Z",
+  "searchTerm": {
+    "wylie": "'bad med par",
+    "unicode": "འབད་མེད་པར་"
+  },
+  "definitions": {
+    "Hopkins-Skt1992": "[MSA]winA་yatnaM་",
+    "Hopkins-Skt2015": "[MSA]winā yatnaṃ",
+    "Hopkins2015": "without་striwing་; without་མཀིང་effort་",
+    "IvesWaldo": "effortless[ly]",
+    "RichardBarron": "effortlessly་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad med par",
+      "unicode": "འབད་མེད་པར་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 5
+}

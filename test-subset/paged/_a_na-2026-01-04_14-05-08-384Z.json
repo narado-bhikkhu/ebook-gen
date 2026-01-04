@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-01-04T14:05:08.384Z",
+  "searchTerm": {
+    "wylie": "'a na",
+    "unicode": "འ་ན་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༡༡༡༤?",
+    "JimValby": "SA {འོ་ན} SA {འོ་ན}"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'a na",
+      "unicode": "འ་ན་"
+    },
+    {
+      "wylie": "'a na yang",
+      "unicode": "འ་ན་ཡང་"
+    }
+  ],
+  "relatedTermsCount": 2,
+  "definitionsCount": 2
+}

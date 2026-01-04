@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-01-04T14:05:08.540Z",
+  "searchTerm": {
+    "wylie": "'ar po",
+    "unicode": "འར་པོ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༡༡༡༤?",
+    "Jaeschke_Scan": "༥༢༥",
+    "JimValby": "angry་",
+    "RangjungYeshe": "angry་, wexed་",
+    "bod_yig_tshig_gter_rgya_mtsho": "〔{ཡུལ}〕{རྩུབ་སྤྱོད།} {འར་པོ་བྱས་ན་གཞན་རྣམས་དགའ་མི་འགྱུར།}",
+    "tshig-mdzod-chen-mo-Tib": "(ཡུལ) རྩུབ་སྤྱོད། འར་པོ་བྱས་ན་གཞན་རྣམས་དགའ་མི་འགྱུར།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ar po",
+      "unicode": "འར་པོ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 6
+}

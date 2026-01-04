@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-01-04T14:05:08.612Z",
+  "searchTerm": {
+    "wylie": "'ba' bo can",
+    "unicode": "འབའ་བོ་ཅན་"
+  },
+  "definitions": {
+    "IvesWaldo": "hollow་",
+    "Jaeschke_Scan": "༤༡༧?",
+    "JimValby": "hollowed་ཨོཨུཏ་, excawated་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ba' bo can",
+      "unicode": "འབའ་བོ་ཅན་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 3
+}

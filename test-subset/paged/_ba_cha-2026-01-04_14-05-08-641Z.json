@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-01-04T14:05:08.642Z",
+  "searchTerm": {
+    "wylie": "'ba' cha",
+    "unicode": "འབའ་ཆ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༩༡༧?",
+    "DanMartin": "SS་༥༢༨.༢།།",
+    "IvesWaldo": "༡) [fodder་ཨོཕ༹] ཨོཨིལ་སེཨེད་lees་;༢) musical་instrument་",
+    "Jaeschke_Scan": "༤༡༧",
+    "JimValby": "musical་instrument་, sediment་, lees་, remnant་",
+    "NegiSkt": "tilakalkaḥ, ཨོ་ཀམ་— atha་sihlake་\n tilakalke་ཅ་piṇyākaḥ a.ko.༢༡༨ཁ།༣.༣.༩; tilakalkaṃ cātra་yantraniṣpīḍanenoddhṛtatailaṃ kalkam་a.wiva.༣.༣.༩།།",
+    "RangjungYeshe": "lees་, musical་instrument་",
+    "bod_yig_tshig_gter_rgya_mtsho": "(༡) {ཡུངས་དཀར་ནག་དང་ཏིལ་སོགས་འབྲུ་ལས་སྣུམ་བཏོན་ཚར་བའི་རྗེས་ཀྱི་སྙིགས་མ་སྟེ།} {དེ་རས་ཐུམ་བྱས་ནས་མེར་བསྲོས་པའི་དུགས་ཀྱིས་རླུང་སྐྲངས་དང་།} {ཚིགས་འགྲམས་པ་སོགས་ལ་ཕན།} (༢) {རོལ་ཆ།} {རྒྱ་གར་སྐད་ཡིན།}",
+    "dag_tshig_gsar_bsgrigs-Tib": "སྣུམ་གྱི་འབྲུ་རིགས་ལས་སྣུམ་རིགས་བཙགས་ནས་བླངས་རྗེས་ཀྱི་སྙིགས་མའི་མིང་།",
+    "tshig-mdzod-chen-mo-Tib": "༡) ཡུངས་ཀར་ནག་དང་ཏིལ་སོགས་འབྲུ་ལས་སྣུམ་བཏོན་ཚར་བའི་རྗེས་ཀྱི་སྙིགས་མ་སྟེ། དེ་རས་ཐུམ་བྱས་ནས་མེར་བསྲོས་པའི་དུགས་ཀྱིས་རླུང་སྐྲངས་དང་། ཚིགས་འགྲམས་པ་སོགས་ལ་ཕན།༢) རོལ་ཆ། རྒྱ་གར་སྐད་ཡིན།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ba' cha",
+      "unicode": "འབའ་ཆ་"
+    },
+    {
+      "wylie": "'ba' cha ba",
+      "unicode": "འབའ་ཆ་བ་"
+    },
+    {
+      "wylie": "'ba' cha gtong",
+      "unicode": "འབའ་ཆ་གཏོང་"
+    },
+    {
+      "wylie": "'ba' cha kha red 'bru",
+      "unicode": "འབའ་ཆ་ཁ་རེད་འབྲུ་"
+    },
+    {
+      "wylie": "'ba' cha mkhan",
+      "unicode": "འབའ་ཆ་མཁན་"
+    },
+    {
+      "wylie": "'ba' cha ru khag",
+      "unicode": "འབའ་ཆ་རུ་ཁག་"
+    }
+  ],
+  "relatedTermsCount": 6,
+  "definitionsCount": 10
+}

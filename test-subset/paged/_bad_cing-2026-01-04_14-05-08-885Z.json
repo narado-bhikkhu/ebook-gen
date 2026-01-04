@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-01-04T14:05:08.886Z",
+  "searchTerm": {
+    "wylie": "'bad cing",
+    "unicode": "འབད་ཅིང་"
+  },
+  "definitions": {
+    "Hopkins-Skt1992": "[L](√ghaT): ghaTamAna་; [C]wyAyacchati་",
+    "Hopkins-Skt2015": "[L](√ghaṭ): ghaṭamāna་; [C]wyāyacchati་",
+    "Hopkins-others'English2015": "{C}when་ཧེ་striwes་; struggle་; makes་ཨན་effort་; exert་oneself་",
+    "Hopkins2015": "striwing་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad cing",
+      "unicode": "འབད་ཅིང་"
+    },
+    {
+      "wylie": "'bad cing mi zhum par brtson pa",
+      "unicode": "འབད་ཅིང་མི་ཞུམ་པར་བརྩོན་པ་"
+    }
+  ],
+  "relatedTermsCount": 2,
+  "definitionsCount": 4
+}

@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-01-04T14:05:08.922Z",
+  "searchTerm": {
+    "wylie": "'bad pa can",
+    "unicode": "འབད་པ་ཅན་"
+  },
+  "definitions": {
+    "Jaeschke_Scan": "༤༡༧?",
+    "JimValby": "assiduous་, painstaking་, industrious་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad pa can",
+      "unicode": "འབད་པ་ཅན་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 2
+}

@@ -1,0 +1,320 @@
+{
+  "timestamp": "2026-01-04T14:05:08.730Z",
+  "searchTerm": {
+    "wylie": "'bab",
+    "unicode": "འབབ་"
+  },
+  "definitions": {
+    "Bialek": "(INTR) ཏོ་come་དོཝན་, ཏོ་descend (C); ཏོ་ཕ༹ལལ (NC); {དུས་ལ་འབབ} ཕོ༹ར་ཐེ་ཏིམེ་ཏོ་come\nw༡ {འབབ} v༢ {བབ}",
+    "DanMartin": "དངངས་པའི་སྐད་dangs. Gces་༥༨༦.༢།།",
+    "Hopkins-Skt1992": "[C]prawahati་; [MSA]syandana་; [C]upayAti་",
+    "Hopkins-Skt2015": "[C]prawahati་; [MSA]syandana་; [C]upayāti་",
+    "Hopkins-TibetanTenses2015": "འབབ། འབབས། བབ། བབས།",
+    "Hopkins-others'English2015": "{C}ཕ༹ློཝ་along་; ཨཔཔྲོཨཆ་; submit་ཏོ་; come་ཏོ་",
+    "Hopkins2015": "descend་; རཻན་; ཕ༹ློཝ་; ཕ༹ལལ་དོཝན་; mowe་downward་; slope་ཏོཝརད་",
+    "IvesWaldo": "༡) ཕ༹ལལ་ཨོཕ༹་snow་;༢) ཕ༹ལལ་;༣) drop་དོཝན་;༤) descend་, ལནད [airplane]",
+    "Jaeschke_Scan": "༤༡༨",
+    "JimValby": "གོ་, come་, enter་, descend་, tax་, taxation་, ཏོ་ལནད་, come་དོཝན་, descend་",
+    "NegiSkt": "= {འབབ་པ།}",
+    "RangjungYeshe": "See {ཕ་འབབ} ཨ་ཕ༹ལལ་ཨོཕ༹་snow་, ཏོ་ཕ༹ལལ་, drop་དོཝན་; ཕ༹ལལ [like་རཻན] {གྲོང་ཡུལ་དུ་མི་འབབ} ཨཱི་shall་not་གོ་དོཝན་ཏོ་ཐེ་willage. happen་",
+    "Verbinator": "Hackett་༢༠༠༣",
+    "bod_yig_tshig_gter_rgya_mtsho": "(༡) {བབས་ཀྱི་ད་ལྟ་བ།} (༢) {བབས་ཀྱི་མ་འོངས་པ་ལ་ཡུལ་སྐད་དུ་འབབ་ཟེར།} (༣){འཐོབ་པའམ་འོས་པའི་དོན་ཏེ།} {ཉེས་པ་ཅན་ལ་ཆད་ཁྲིམས་འབབ།} {དྲིན་ཅན་ལ་དྲིན་ལོག་མི་འབབ་ལྟ་བུ།}",
+    "dag_tshig_gsar_bsgrigs-Tib": "༡. བབས་ཀྱི་ད་ལྟ་བ།༢. བབས་ཀྱི་མ་འོངས་པ་ལ་ཡུལ་སྐད་དུ་འབབ་ཟེར།༣. འཐོབ་པའམ་འོས་པའི་དོན་ཏེ། ཉེས་པ་ཅན་ལ་ཆད་ཁྲིམས་འབབ། དྲིན་ཅན་ལ་དྲིན་ལོག་མི་འབབ་ལྟ་བུ། (འབབ་སྒོ) ཡོང་སྒོ་དང་དོན་འདྲ་སྟེ། ད་ལོ་འབབ་སྒོ་བཟང་། འབབ་སྒོ་འགྲོ་སྒོ་ལས་མང་ལྟ་བུ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bab",
+      "unicode": "འབབ་"
+    },
+    {
+      "wylie": "'bab bam nye 'gro",
+      "unicode": "འབབ་བམ་ཉེ་འགྲོ་"
+    },
+    {
+      "wylie": "'bab bam nye bar 'gro",
+      "unicode": "འབབ་བམ་ཉེ་བར་འགྲོ་"
+    },
+    {
+      "wylie": "'bab bde",
+      "unicode": "འབབ་བདེ་"
+    },
+    {
+      "wylie": "'bab bla dpon ji stsal",
+      "unicode": "འབབ་བླ་དཔོན་ཇི་སྩལ་"
+    },
+    {
+      "wylie": "'bab byed",
+      "unicode": "འབབ་བྱེད་"
+    },
+    {
+      "wylie": "'bab byed lus ldan",
+      "unicode": "འབབ་བྱེད་ལུས་ལྡན་"
+    },
+    {
+      "wylie": "'bab byed pa",
+      "unicode": "འབབ་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bab bzhi",
+      "unicode": "འབབ་བཞི་"
+    },
+    {
+      "wylie": "'bab bzo byed",
+      "unicode": "འབབ་བཟོ་བྱེད་"
+    },
+    {
+      "wylie": "'bab chu",
+      "unicode": "འབབ་ཆུ་"
+    },
+    {
+      "wylie": "'bab chu bzhi",
+      "unicode": "འབབ་ཆུ་བཞི་"
+    },
+    {
+      "wylie": "'bab chu chen po",
+      "unicode": "འབབ་ཆུ་ཆེན་པོ་"
+    },
+    {
+      "wylie": "'bab chu chung",
+      "unicode": "འབབ་ཆུ་ཆུང་"
+    },
+    {
+      "wylie": "'bab chu drag po'i rgyun las bzlog ste lhung bzed kyis chu mi bcu",
+      "unicode": "འབབ་ཆུ་དྲག་པོའི་རྒྱུན་ལས་བཟློག་སྟེ་ལྷུང་བཟེད་ཀྱིས་ཆུ་མི་བཅུ་"
+    },
+    {
+      "wylie": "'bab chu rnam kyis mngon par dga' ba",
+      "unicode": "འབབ་ཆུ་རྣམ་ཀྱིས་མངོན་པར་དགའ་བ་"
+    },
+    {
+      "wylie": "'bab chu rnam pa sna tshogs pa dang ldan pa",
+      "unicode": "འབབ་ཆུ་རྣམ་པ་སྣ་ཚོགས་པ་དང་ལྡན་པ་"
+    },
+    {
+      "wylie": "'bab chu ro hi ta ka",
+      "unicode": "འབབ་ཆུ་རོ་ཧི་ཏ་ཀ་"
+    },
+    {
+      "wylie": "'bab chu'i dong",
+      "unicode": "འབབ་ཆུའི་དོང་"
+    },
+    {
+      "wylie": "'bab chu'i rgyun",
+      "unicode": "འབབ་ཆུའི་རྒྱུན་"
+    },
+    {
+      "wylie": "'bab chu'i sgra dang ldan pa'i nags",
+      "unicode": "འབབ་ཆུའི་སྒྲ་དང་ལྡན་པའི་ནགས་"
+    },
+    {
+      "wylie": "'bab cu",
+      "unicode": "འབབ་ཅུ་"
+    },
+    {
+      "wylie": "'bab deb",
+      "unicode": "འབབ་དེབ་"
+    },
+    {
+      "wylie": "'bab g.yu skya dkar",
+      "unicode": "འབབ་གཡུ་སྐྱ་དཀར་"
+    },
+    {
+      "wylie": "'bab gron",
+      "unicode": "འབབ་གྲོན་"
+    },
+    {
+      "wylie": "'bab gzhi",
+      "unicode": "འབབ་གཞི་"
+    },
+    {
+      "wylie": "'bab ka",
+      "unicode": "འབབ་ཀ་"
+    },
+    {
+      "wylie": "'bab kha",
+      "unicode": "འབབ་ཁ་"
+    },
+    {
+      "wylie": "'bab kha blangs",
+      "unicode": "འབབ་ཁ་བླངས་"
+    },
+    {
+      "wylie": "'bab khongs",
+      "unicode": "འབབ་ཁོངས་"
+    },
+    {
+      "wylie": "'bab khral",
+      "unicode": "འབབ་ཁྲལ་"
+    },
+    {
+      "wylie": "'bab khral snyan shog",
+      "unicode": "འབབ་ཁྲལ་སྙན་ཤོག་"
+    },
+    {
+      "wylie": "'bab khral zur bcad",
+      "unicode": "འབབ་ཁྲལ་ཟུར་བཅད་"
+    },
+    {
+      "wylie": "'bab khungs",
+      "unicode": "འབབ་ཁུངས་"
+    },
+    {
+      "wylie": "'bab ldan",
+      "unicode": "འབབ་ལྡན་"
+    },
+    {
+      "wylie": "'bab lhung",
+      "unicode": "འབབ་ལྷུང་"
+    },
+    {
+      "wylie": "'bab ma",
+      "unicode": "འབབ་མ་"
+    },
+    {
+      "wylie": "'bab pa",
+      "unicode": "འབབ་པ་"
+    },
+    {
+      "wylie": "'bab pa can",
+      "unicode": "འབབ་པ་ཅན་"
+    },
+    {
+      "wylie": "'bab pa'i chu",
+      "unicode": "འབབ་པའི་ཆུ་"
+    },
+    {
+      "wylie": "'bab pa'i rgyun",
+      "unicode": "འབབ་པའི་རྒྱུན་"
+    },
+    {
+      "wylie": "'bab pa'i tshe na",
+      "unicode": "འབབ་པའི་ཚེ་ན་"
+    },
+    {
+      "wylie": "'bab par 'gyur",
+      "unicode": "འབབ་པར་འགྱུར་"
+    },
+    {
+      "wylie": "'bab par 'gyur ba",
+      "unicode": "འབབ་པར་འགྱུར་བ་"
+    },
+    {
+      "wylie": "'bab par byed",
+      "unicode": "འབབ་པར་བྱེད་"
+    },
+    {
+      "wylie": "'bab par byed pa",
+      "unicode": "འབབ་པར་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bab par gyis",
+      "unicode": "འབབ་པར་གྱིས་"
+    },
+    {
+      "wylie": "'bab phyogs",
+      "unicode": "འབབ་ཕྱོགས་"
+    },
+    {
+      "wylie": "'bab phyogs mthun",
+      "unicode": "འབབ་ཕྱོགས་མཐུན་"
+    },
+    {
+      "wylie": "'bab rgya",
+      "unicode": "འབབ་རྒྱ་"
+    },
+    {
+      "wylie": "'bab rgyud",
+      "unicode": "འབབ་རྒྱུད་"
+    },
+    {
+      "wylie": "'bab rmyug",
+      "unicode": "འབབ་རྨྱུག་"
+    },
+    {
+      "wylie": "'bab rom bka' brgyud",
+      "unicode": "འབབ་རོམ་བཀའ་བརྒྱུད་"
+    },
+    {
+      "wylie": "'bab rong dgon",
+      "unicode": "འབབ་རོང་དགོན་"
+    },
+    {
+      "wylie": "'bab rten",
+      "unicode": "འབབ་རྟེན་"
+    },
+    {
+      "wylie": "'bab sa",
+      "unicode": "འབབ་ས་"
+    },
+    {
+      "wylie": "'bab sa sna len dang",
+      "unicode": "འབབ་ས་སྣ་ལེན་དང་"
+    },
+    {
+      "wylie": "'bab sgo",
+      "unicode": "འབབ་སྒོ་"
+    },
+    {
+      "wylie": "'bab sha 'bab nor",
+      "unicode": "འབབ་ཤ་འབབ་ནོར་"
+    },
+    {
+      "wylie": "'bab smyug",
+      "unicode": "འབབ་སྨྱུག་"
+    },
+    {
+      "wylie": "'bab snon",
+      "unicode": "འབབ་སྣོན་"
+    },
+    {
+      "wylie": "'bab snon sprod srol",
+      "unicode": "འབབ་སྣོན་སྤྲོད་སྲོལ་"
+    },
+    {
+      "wylie": "'bab sprod pa",
+      "unicode": "འབབ་སྤྲོད་པ་"
+    },
+    {
+      "wylie": "'bab stegs",
+      "unicode": "འབབ་སྟེགས་"
+    },
+    {
+      "wylie": "'bab stegs bde ba",
+      "unicode": "འབབ་སྟེགས་བདེ་བ་"
+    },
+    {
+      "wylie": "'bab stegs mgon po",
+      "unicode": "འབབ་སྟེགས་མགོན་པོ་"
+    },
+    {
+      "wylie": "'bab thang",
+      "unicode": "འབབ་ཐང་"
+    },
+    {
+      "wylie": "'bab tsa",
+      "unicode": "འབབ་ཙ་"
+    },
+    {
+      "wylie": "'bab tshugs",
+      "unicode": "འབབ་ཚུགས་"
+    },
+    {
+      "wylie": "'bab tu 'jug pa",
+      "unicode": "འབབ་ཏུ་འཇུག་པ་"
+    },
+    {
+      "wylie": "'bab yong",
+      "unicode": "འབབ་ཡོང་"
+    },
+    {
+      "wylie": "'bab zhib las khungs",
+      "unicode": "འབབ་ཞིབ་ལས་ཁུངས་"
+    },
+    {
+      "wylie": "'bab zhus",
+      "unicode": "འབབ་ཞུས་"
+    }
+  ],
+  "relatedTermsCount": 73,
+  "definitionsCount": 15
+}

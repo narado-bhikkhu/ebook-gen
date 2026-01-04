@@ -1,0 +1,422 @@
+{
+  "timestamp": "2026-01-04T14:05:08.860Z",
+  "searchTerm": {
+    "wylie": "'bad",
+    "unicode": "འབད་"
+  },
+  "definitions": {
+    "Hopkins-Skt1992": "[C]yatna་; [MSA](√yat): yateta་; [MSA](√ghaT): ghaTamAna་; [MSA](ཝྱཱ་√yam): vyAyacchate་",
+    "Hopkins-Skt2015": "[C]yatna་; [MSA](√yat): yateta་; [MSA](√ghaṭ): ghaṭamāna་; [MSA](wyā √yam): vyāyacchate་",
+    "Hopkins2015": "striwe་; མཀེ་effort་; མཀེ་exertion་; exertion་",
+    "IvesWaldo": "༡) [བེ] ཨེཨརྣེསཏ[ly];༢) [བེ] དིལིགེནཏ[ly];༣) concentrate་;༤) apply་༡ self་;༥) persewere[ance];༦) exert[ཨིཨོན], endeavor་, མཀེ་ཨན་effort་, strive་ཏོ། ཕོ༹ར་, try་ཏོ་, [put] effort [ཨིནཏོ];༧) recite་",
+    "JimValby": "exertion་",
+    "NegiSkt": "= {འབད་པ།}",
+    "RangjungYeshe": "ཏོ་སྟུདཡ་ཧརད་",
+    "Verbinator": "Chang་༡༩༧༡: wii.༥",
+    "dag_tshig_gsar_bsgrigs-Tib": "(བྱེད་འབྲེལ་ལས་ཚིག་མ་འོངས་པ་དང་ད་ལྟ་བ་དང་འདས་པ) དམིགས་ཡུལ་ཞིག་གི་དོན་དུ་ལུས་ངག་ཡིད་གསུམ་གྱིས་ཤུགས་ཆེན་པོ་འབྱིན་པའི་དོན་ཏེ། ཐུན་མོང་གི་དོན་དུ་འབད། སློབ་སྦྱོང་ལ་འབད་དགོས། ཞིང་ལས་ལ་འབད་ཀྱིན་འདུག་འབད་མེད་ལྷུན་འགྲུབ་ཅེས་པ་ལྟ་བུ། (འབོད) ནི་སྐུལ་ཚིག་སྟེ། ཐུན་མོང་གི་ལས་དོན་ལ་འབོད་ཅིག་ལྟ་བུ། (འབད་འབུངས) འབད་པ་མང་བོ་འམ་ཆེན་པོ་སྟེ། ཐུན་མོང་གི་དོན་ལ་འབད་འབུངས་བྱས་ལྟ་བུ། (འབད་རྩོལ) འབད་པ་དང་རྩོལ་བ་བྱས་པའི་ཚིག་བསྡུས་པ་སྟེ། འབད་རྩོལ་བྱས་ན་ཟས་གོས་འཛོམ་ལྟ་བུ། (འབད་བརྩོན) འབད་པ་དང་བརྩོན་པ་ཞེས་པའི་ཚིག་བསྡུས་པ་སྟེ། མུ་མཐུད་འབད་བརྩོན་ཆེ་བསྐྱེད་བྱས་པར་བརྟེན་ལག་རྩལ་མགྱོགས་མྱུར་དུ་བྱང་ཆུབ་པ་ལྟ་བུ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad",
+      "unicode": "འབད་"
+    },
+    {
+      "wylie": "'bad 'bad",
+      "unicode": "འབད་འབད་"
+    },
+    {
+      "wylie": "'bad 'bad 'bung 'bung",
+      "unicode": "འབད་འབད་འབུང་འབུང་"
+    },
+    {
+      "wylie": "'bad 'bad dung dung",
+      "unicode": "འབད་འབད་དུང་དུང་"
+    },
+    {
+      "wylie": "'bad 'bad pa",
+      "unicode": "འབད་འབད་པ་"
+    },
+    {
+      "wylie": "'bad 'bung",
+      "unicode": "འབད་འབུང་"
+    },
+    {
+      "wylie": "'bad 'bung 'bung",
+      "unicode": "འབད་འབུང་འབུང་"
+    },
+    {
+      "wylie": "'bad 'bung che skyed",
+      "unicode": "འབད་འབུང་ཆེ་སྐྱེད་"
+    },
+    {
+      "wylie": "'bad 'bungs",
+      "unicode": "འབད་འབུངས་"
+    },
+    {
+      "wylie": "'bad 'bungs nus",
+      "unicode": "འབད་འབུངས་ནུས་"
+    },
+    {
+      "wylie": "'bad 'bungs thon",
+      "unicode": "འབད་འབུངས་ཐོན་"
+    },
+    {
+      "wylie": "'bad 'khor",
+      "unicode": "འབད་འཁོར་"
+    },
+    {
+      "wylie": "'bad 'tshal ba",
+      "unicode": "འབད་འཚལ་བ་"
+    },
+    {
+      "wylie": "'bad bcas su grol ba",
+      "unicode": "འབད་བཅས་སུ་གྲོལ་བ་"
+    },
+    {
+      "wylie": "'bad brtson",
+      "unicode": "འབད་བརྩོན་"
+    },
+    {
+      "wylie": "'bad brtson byed pa",
+      "unicode": "འབད་བརྩོན་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bad brtson lhod med",
+      "unicode": "འབད་བརྩོན་ལྷོད་མེད་"
+    },
+    {
+      "wylie": "'bad bya",
+      "unicode": "འབད་བྱ་"
+    },
+    {
+      "wylie": "'bad byed",
+      "unicode": "འབད་བྱེད་"
+    },
+    {
+      "wylie": "'bad cing",
+      "unicode": "འབད་ཅིང་"
+    },
+    {
+      "wylie": "'bad cing mi zhum par brtson pa",
+      "unicode": "འབད་ཅིང་མི་ཞུམ་པར་བརྩོན་པ་"
+    },
+    {
+      "wylie": "'bad de bsgom",
+      "unicode": "འབད་དེ་བསྒོམ་"
+    },
+    {
+      "wylie": "'bad de bsgrub par bya ba",
+      "unicode": "འབད་དེ་བསྒྲུབ་པར་བྱ་བ་"
+    },
+    {
+      "wylie": "'bad de drang bar bya ba",
+      "unicode": "འབད་དེ་དྲང་བར་བྱ་བ་"
+    },
+    {
+      "wylie": "'bad dgos",
+      "unicode": "འབད་དགོས་"
+    },
+    {
+      "wylie": "'bad do",
+      "unicode": "འབད་དོ་"
+    },
+    {
+      "wylie": "'bad du 'dzin pa",
+      "unicode": "འབད་དུ་འཛིན་པ་"
+    },
+    {
+      "wylie": "'bad du bcug pa",
+      "unicode": "འབད་དུ་བཅུག་པ་"
+    },
+    {
+      "wylie": "'bad dung",
+      "unicode": "འབད་དུང་"
+    },
+    {
+      "wylie": "'bad las byung ba",
+      "unicode": "འབད་ལས་བྱུང་བ་"
+    },
+    {
+      "wylie": "'bad lo",
+      "unicode": "འབད་ལོ་"
+    },
+    {
+      "wylie": "'bad med",
+      "unicode": "འབད་མེད་"
+    },
+    {
+      "wylie": "'bad med du",
+      "unicode": "འབད་མེད་དུ་"
+    },
+    {
+      "wylie": "'bad med kyi ngang",
+      "unicode": "འབད་མེད་ཀྱི་ངང་"
+    },
+    {
+      "wylie": "'bad med lhun grub",
+      "unicode": "འབད་མེད་ལྷུན་གྲུབ་"
+    },
+    {
+      "wylie": "'bad med lhun grub tu mdzad pa gsum",
+      "unicode": "འབད་མེད་ལྷུན་གྲུབ་ཏུ་མཛད་པ་གསུམ་"
+    },
+    {
+      "wylie": "'bad med lhun gyis grub pa",
+      "unicode": "འབད་མེད་ལྷུན་གྱིས་གྲུབ་པ་"
+    },
+    {
+      "wylie": "'bad med ngang 'byung",
+      "unicode": "འབད་མེད་ངང་འབྱུང་"
+    },
+    {
+      "wylie": "'bad med pa",
+      "unicode": "འབད་མེད་པ་"
+    },
+    {
+      "wylie": "'bad med par",
+      "unicode": "འབད་མེད་པར་"
+    },
+    {
+      "wylie": "'bad mi dgos",
+      "unicode": "འབད་མི་དགོས་"
+    },
+    {
+      "wylie": "'bad mi dgos pa",
+      "unicode": "འབད་མི་དགོས་པ་"
+    },
+    {
+      "wylie": "'bad mi dgos par",
+      "unicode": "འབད་མི་དགོས་པར་"
+    },
+    {
+      "wylie": "'bad mi dgos par ngang gis 'byung ba",
+      "unicode": "འབད་མི་དགོས་པར་ངང་གིས་འབྱུང་བ་"
+    },
+    {
+      "wylie": "'bad na",
+      "unicode": "འབད་ན་"
+    },
+    {
+      "wylie": "'bad nas 'byung ba",
+      "unicode": "འབད་ནས་འབྱུང་བ་"
+    },
+    {
+      "wylie": "'bad pa",
+      "unicode": "འབད་པ་"
+    },
+    {
+      "wylie": "'bad pa brtan pa",
+      "unicode": "འབད་པ་བརྟན་པ་"
+    },
+    {
+      "wylie": "'bad pa brtson pa cher byed pa",
+      "unicode": "འབད་པ་བརྩོན་པ་ཆེར་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bad pa byed",
+      "unicode": "འབད་པ་བྱེད་"
+    },
+    {
+      "wylie": "'bad pa byed pa",
+      "unicode": "འབད་པ་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bad pa can",
+      "unicode": "འབད་པ་ཅན་"
+    },
+    {
+      "wylie": "'bad pa chen pos",
+      "unicode": "འབད་པ་ཆེན་པོས་"
+    },
+    {
+      "wylie": "'bad pa chen pos brtson pa cher byed pa",
+      "unicode": "འབད་པ་ཆེན་པོས་བརྩོན་པ་ཆེར་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bad pa chung ngus rlabs chen tshogs sdud la zhes sogs",
+      "unicode": "འབད་པ་ཆུང་ངུས་རླབས་ཆེན་ཚོགས་སྡུད་ལ་ཞེས་སོགས་"
+    },
+    {
+      "wylie": "'bad pa dang bcas pa",
+      "unicode": "འབད་པ་དང་བཅས་པ་"
+    },
+    {
+      "wylie": "'bad pa dang ldan pa",
+      "unicode": "འབད་པ་དང་ལྡན་པ་"
+    },
+    {
+      "wylie": "'bad pa don med",
+      "unicode": "འབད་པ་དོན་མེད་"
+    },
+    {
+      "wylie": "'bad pa gyis",
+      "unicode": "འབད་པ་གྱིས་"
+    },
+    {
+      "wylie": "'bad pa las byung ba",
+      "unicode": "འབད་པ་ལས་བྱུང་བ་"
+    },
+    {
+      "wylie": "'bad pa mdzod",
+      "unicode": "འབད་པ་མཛོད་"
+    },
+    {
+      "wylie": "'bad pa med",
+      "unicode": "འབད་པ་མེད་"
+    },
+    {
+      "wylie": "'bad pa med pa",
+      "unicode": "འབད་པ་མེད་པ་"
+    },
+    {
+      "wylie": "'bad pa med par",
+      "unicode": "འབད་པ་མེད་པར་"
+    },
+    {
+      "wylie": "'bad pa med par thar par 'gyur",
+      "unicode": "འབད་པ་མེད་པར་ཐར་པར་འགྱུར་"
+    },
+    {
+      "wylie": "'bad pa mi mnga' bar ye shes 'jug pa",
+      "unicode": "འབད་པ་མི་མངའ་བར་ཡེ་ཤེས་འཇུག་པ་"
+    },
+    {
+      "wylie": "'bad pa rtsom pa",
+      "unicode": "འབད་པ་རྩོམ་པ་"
+    },
+    {
+      "wylie": "'bad pa'am brtson pa",
+      "unicode": "འབད་པའམ་བརྩོན་པ་"
+    },
+    {
+      "wylie": "'bad pa'am rtsol ba",
+      "unicode": "འབད་པའམ་རྩོལ་བ་"
+    },
+    {
+      "wylie": "'bad pa'i rnam pa bsgom pa",
+      "unicode": "འབད་པའི་རྣམ་པ་བསྒོམ་པ་"
+    },
+    {
+      "wylie": "'bad par",
+      "unicode": "འབད་པར་"
+    },
+    {
+      "wylie": "'bad par 'gyur",
+      "unicode": "འབད་པར་འགྱུར་"
+    },
+    {
+      "wylie": "'bad par 'tshal",
+      "unicode": "འབད་པར་འཚལ་"
+    },
+    {
+      "wylie": "'bad par bgyi",
+      "unicode": "འབད་པར་བགྱི་"
+    },
+    {
+      "wylie": "'bad par bya",
+      "unicode": "འབད་པར་བྱ་"
+    },
+    {
+      "wylie": "'bad par bya ba",
+      "unicode": "འབད་པར་བྱ་བ་"
+    },
+    {
+      "wylie": "'bad par bya'o",
+      "unicode": "འབད་པར་བྱའོ་"
+    },
+    {
+      "wylie": "'bad par byed",
+      "unicode": "འབད་པར་བྱེད་"
+    },
+    {
+      "wylie": "'bad par byed do",
+      "unicode": "འབད་པར་བྱེད་དོ་"
+    },
+    {
+      "wylie": "'bad par byed pa",
+      "unicode": "འབད་པར་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bad par byed pa yin",
+      "unicode": "འབད་པར་བྱེད་པ་ཡིན་"
+    },
+    {
+      "wylie": "'bad par gyis",
+      "unicode": "འབད་པར་གྱིས་"
+    },
+    {
+      "wylie": "'bad par gyis shig",
+      "unicode": "འབད་པར་གྱིས་ཤིག་"
+    },
+    {
+      "wylie": "'bad par mi byed pa",
+      "unicode": "འབད་པར་མི་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bad pas",
+      "unicode": "འབད་པས་"
+    },
+    {
+      "wylie": "'bad pas 'gog pa",
+      "unicode": "འབད་པས་འགོག་པ་"
+    },
+    {
+      "wylie": "'bad pas bsgrub par bya ba",
+      "unicode": "འབད་པས་བསྒྲུབ་པར་བྱ་བ་"
+    },
+    {
+      "wylie": "'bad pas bsgrub par bya ba ma yin pa",
+      "unicode": "འབད་པས་བསྒྲུབ་པར་བྱ་བ་མ་ཡིན་པ་"
+    },
+    {
+      "wylie": "'bad pas chags bral bskyed pa",
+      "unicode": "འབད་པས་ཆགས་བྲལ་བསྐྱེད་པ་"
+    },
+    {
+      "wylie": "'bad pas kun brtags pa ma yin pa",
+      "unicode": "འབད་པས་ཀུན་བརྟགས་པ་མ་ཡིན་པ་"
+    },
+    {
+      "wylie": "'bad pas sgrub pa",
+      "unicode": "འབད་པས་སྒྲུབ་པ་"
+    },
+    {
+      "wylie": "'bad pas zhugs pa",
+      "unicode": "འབད་པས་ཞུགས་པ་"
+    },
+    {
+      "wylie": "'bad rtsal",
+      "unicode": "འབད་རྩལ་"
+    },
+    {
+      "wylie": "'bad rtsod gyi rtog pa",
+      "unicode": "འབད་རྩོད་གྱི་རྟོག་པ་"
+    },
+    {
+      "wylie": "'bad rtsol",
+      "unicode": "འབད་རྩོལ་"
+    },
+    {
+      "wylie": "'bad rtsol byed pa",
+      "unicode": "འབད་རྩོལ་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bad rtsol gyi spros pa",
+      "unicode": "འབད་རྩོལ་གྱི་སྤྲོས་པ་"
+    },
+    {
+      "wylie": "'bad rtsol ldan pa",
+      "unicode": "འབད་རྩོལ་ལྡན་པ་"
+    },
+    {
+      "wylie": "'bad rtsol lhod med",
+      "unicode": "འབད་རྩོལ་ལྷོད་མེད་"
+    },
+    {
+      "wylie": "'bad rtsol med pa",
+      "unicode": "འབད་རྩོལ་མེད་པ་"
+    }
+  ],
+  "relatedTermsCount": 100,
+  "definitionsCount": 9
+}

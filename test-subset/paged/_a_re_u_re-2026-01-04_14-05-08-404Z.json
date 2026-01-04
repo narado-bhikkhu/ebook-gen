@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-01-04T14:05:08.404Z",
+  "searchTerm": {
+    "wylie": "'a re 'u re",
+    "unicode": "འ་རེ་འུ་རེ་"
+  },
+  "definitions": {
+    "JimValby": "ཨ་loud་སོཨུནད་, loud་whirring་noise་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'a re 'u re",
+      "unicode": "འ་རེ་འུ་རེ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 1
+}

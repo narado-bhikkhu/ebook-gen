@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-01-04T14:05:08.943Z",
+  "searchTerm": {
+    "wylie": "'bad pa med par thar par 'gyur",
+    "unicode": "འབད་པ་མེད་པར་ཐར་པར་འགྱུར་"
+  },
+  "definitions": {
+    "Hopkins-Skt1992": "[MSA]ayatna་mokSa་",
+    "Hopkins-Skt2015": "[MSA]ayatna་mokṣa་",
+    "Hopkins2015": "become་liberated་without་མཀིང་effort་",
+    "IvesWaldo": "བེ་liberated་effortlessly་",
+    "Jaeschke_Scan": "༤༡༧?"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad pa med par thar par 'gyur",
+      "unicode": "འབད་པ་མེད་པར་ཐར་པར་འགྱུར་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 5
+}

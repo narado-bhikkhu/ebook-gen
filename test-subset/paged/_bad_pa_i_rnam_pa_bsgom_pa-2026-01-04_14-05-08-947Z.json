@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-01-04T14:05:08.948Z",
+  "searchTerm": {
+    "wylie": "'bad pa'i rnam pa bsgom pa",
+    "unicode": "འབད་པའི་རྣམ་པ་བསྒོམ་པ་"
+  },
+  "definitions": {
+    "Hopkins-Skt1992": "[MSA]wyavasAyAkAra་bhAvana་",
+    "Hopkins-Skt2015": "[MSA]wyavasāyākāra་bhāvana་",
+    "Hopkins-TibetanTenses2015": "བསྒོམ། སྒོམ། བསྒོམས། སྒོམས།",
+    "Hopkins2015": "cultiwate་ཐེ་aspect(s) ཨོཕ༹་striving་",
+    "IvesWaldo": "meditate་ཨོན་effort་",
+    "NegiSkt": "pā. wyavasāyākārabhāvanaḥ, bhāvanākārapraviṣṭabhedaḥ — {སྒོམ་པའི་རྣམ་པ་ལ་ཞུགས་པ་ནི།} {རྣམ་པ་བཞི་བསྒོམ་པ་དང་རྣམ་པ་སུམ་ཅུ་རྩ་བདུན་བསྒོམ་པའོ།།} … {དེ་ལ་རྣམ་པ་སུམ་ཅུ་རྩ་བདུན་བསྒོམ་པ་ནི} … {འབད་པའི་རྣམ་པ་བསྒོམ་པ་དང} bhāvanākārapraviṣṭaścaturākārabhāvanaḥ saptatriṃśadākārabhāvanaśca … tatra་saptatriṃśadākārabhāvanaḥ … vyavasāyākārabhāvanaḥ sū.vyā.༡༦༧ཀ།༥༨།།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad pa'i rnam pa bsgom pa",
+      "unicode": "འབད་པའི་རྣམ་པ་བསྒོམ་པ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 6
+}

@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-01-04T14:05:08.973Z",
+  "searchTerm": {
+    "wylie": "'bad par byed do",
+    "unicode": "འབད་པར་བྱེད་དོ་"
+  },
+  "definitions": {
+    "Hopkins-Skt1992": "[C]udyogam་Apadyate་; [MSA](ཝྱཱ་√yam): vyAyacchate་",
+    "Hopkins-Skt2015": "[C]udyogam་āpadyate་; [MSA](wyā √yam): vyāyacchate་",
+    "Hopkins-others'English2015": "exert་oneself་; མཀེ་ཨ་གྲེཨཏ་effort་",
+    "Hopkins2015": "striwe་; striving་; མཀེ་effort་; མཀིང་effort་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad par byed do",
+      "unicode": "འབད་པར་བྱེད་དོ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 4
+}

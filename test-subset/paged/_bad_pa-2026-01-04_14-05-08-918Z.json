@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-01-04T14:05:08.921Z",
+  "searchTerm": {
+    "wylie": "'bad pa",
+    "unicode": "འབད་པ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༩༡༧",
+    "Hopkins-Comment": "compare: {རྩོལ་བ}, exertion་; {བརྩོན་འགྲུས}, effort་",
+    "Hopkins-Skt1992": "yatna. wyAyAma་; [MSA་,MV]yatna. vyAyAma་; [C]parizrama་; [C]samutsuka་; [MSA]ghaTana་; [MV]yatna. vyAyAma་",
+    "Hopkins-Skt2015": "[MSA་,MV]yatna་; [C]pariśrama་; [C]samutsuka་; [MSA]ghaṭana་; [MV]wyāyāma་",
+    "Hopkins-others'English2015": "continual་སྟུདཡ་; zealous་; endeawor་",
+    "Hopkins2015": "ཏོ་striwe་; exertion་; མཀེ་effort་; མཀེ་exertion་",
+    "IvesWaldo": "effort་, exertion་, endeawor་, perserverence་, struggle་",
+    "Jaeschke_Scan": "༤༡༧",
+    "JimValby": "སྟུདཡ་ཧརད་, endeawor་, earnestness་, exertion་, try་, exert་oneself་, མཀེ་effort་, cultivate་, རེཨར་, ཏཀེ་ཅརེ་ཨོཕ༹་, SA་འབོད་པ་, strive་fervently་, ཏོ་strive་, ཏོ་persevere་ཨིན་",
+    "Mahavyutpatti-Scan-1989": "༢༦༧",
+    "Mahavyutpatti-Skt": "prayatnaḥ",
+    "NegiSkt": "warta., bhavi., bhūta.; saka.; འབོད་vidhau་",
+    "RangjungYeshe": "effort་, endeawor་, ཏོ་ཕ༹ལལ\n -- -\nft. ཨོཕ༹ {འབད་པ}; {འབད་པ་, འབད་པ་, འབད་པ་, འབོད} trans. v.; concentrate་, དིལིགེནཏ་, exertion་, perseverance་, effort་, apply་ཨོནེ་self་, put་effort་ཨིནཏོ་, persevere་ཨིན་, བེ་དིལིགེནཏ་, exert་ཨོནེ་self་, recite་, earnestly་, exert [yourself], exert [yourself] ཨིན་reciting་, དིལིགེནཏ་; ཏོ་strive་, མཀེ་effort་; effort་, endeavor་, exert་one'as་self་, apply་one'as་self་, effort་, trouble་, struggle་, strain་, endeavor་, striving་, pains་; pf. ཨོཕ༹ {འབད་པ}, བེ་དིལིགེནཏ་ཨིན་",
+    "RichardBarron": "ཏོ་striwe། མཀེ་effort་",
+    "Yoghacharabhumi-glossary": "yatna. wyAyAma་; ghaTa. prayatna. ཨ་tRpta. utsuka. vyavasAyatA. vyAyacchat. vyAyacchamAna. vy་A-། ཡམ:vyAyacchate་",
+    "bod_yig_tshig_gter_rgya_mtsho": "(༡) 〔{ཐ་དད་པ}〕 {འབད་པ།} {འབད་པ།} {འབོད།} {། རྩོལ་བ་དང་བརྩོན་པ།} {སློབ་གསོའི་ལས་དོན་ལ་འབད་པ།} {སློབ་སྦྱོང་ལ་འབོད་ཅིག} (༢) {བརྩོན་འགྲུས།} {སྤྱི་ཚོགས་རིང་ལུགས་འཛུགས་སྐྲུན་གྱི་བྱ་བ་འབད་པ་ཆེན་པོས་སྒྲུབ་པ།} {ལས་དོན་ལ་འབད་པ་བརྟན་པོ་བརྩམས་པའི་རྐྱེན་གྱིས་དཀའ་ངལ་ཚང་མ་བསལ་བ།} {སྦྱངས་འབྲས་བཟང་པོ་འཐོབ་པར་འབད་པ་སྔོན་དུ་འགྲོ་དགོས།} {བརྟག་དཔྱད་འབད་པ་དུ་མས་འཕྲུལ་འཁོར་དཔེ་གསར་ཞིག་བཟོ་སྐྲུན་བྱས་པ།}",
+    "sgra_bye_brag_tu_rtogs_byed_chen_mo": "Skt. prayatnaḥ",
+    "tshig-mdzod-chen-mo-Tib": "༡. (ཐ་དད་པ) འབད་པ། འབད་པ། འབོད།། རྩོལ་བ་དང་བརྩོན་པ། སློབ་གསོའི་ལས་དོན་ལ་འབད་པ། སློབ་སྦྱོང་ལ་འབོད་ཅིག་༢. བརྩོན་འགྲུས། སྤྱི་ཚོགས་རིང་ལུགས་འཛུགས་སྐྲུན་གྱི་བྱ་བ་འབད་པ་ཆེན་པོས་སྒྲུབ་པ། ལས་དོན་ལ་འབད་པ་བརྟན་པོ་བརྩམས་པའི་རྐྱེན་གྱིས་དཀའ་ངལ་ཚང་མ་བསལ་བ། སྦྱངས་འབྲས་བཟང་པོ་འཐོབ་པར་འབད་པ་སྔོན་དུ་འགྲོ་དགོས། བརྟག་དཔྱད་འབད་པ་དུ་མས་འཕྲུལ་འཁོར་དཔེ་གསར་ཞིག་བཟོ་སྐྲུན་བྱས་པ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad pa",
+      "unicode": "འབད་པ་"
+    },
+    {
+      "wylie": "'bad pa brtan pa",
+      "unicode": "འབད་པ་བརྟན་པ་"
+    },
+    {
+      "wylie": "'bad pa brtson pa cher byed pa",
+      "unicode": "འབད་པ་བརྩོན་པ་ཆེར་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bad pa byed",
+      "unicode": "འབད་པ་བྱེད་"
+    },
+    {
+      "wylie": "'bad pa byed pa",
+      "unicode": "འབད་པ་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bad pa can",
+      "unicode": "འབད་པ་ཅན་"
+    },
+    {
+      "wylie": "'bad pa chen pos",
+      "unicode": "འབད་པ་ཆེན་པོས་"
+    },
+    {
+      "wylie": "'bad pa chen pos brtson pa cher byed pa",
+      "unicode": "འབད་པ་ཆེན་པོས་བརྩོན་པ་ཆེར་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bad pa chung ngus rlabs chen tshogs sdud la zhes sogs",
+      "unicode": "འབད་པ་ཆུང་ངུས་རླབས་ཆེན་ཚོགས་སྡུད་ལ་ཞེས་སོགས་"
+    },
+    {
+      "wylie": "'bad pa dang bcas pa",
+      "unicode": "འབད་པ་དང་བཅས་པ་"
+    },
+    {
+      "wylie": "'bad pa dang ldan pa",
+      "unicode": "འབད་པ་དང་ལྡན་པ་"
+    },
+    {
+      "wylie": "'bad pa don med",
+      "unicode": "འབད་པ་དོན་མེད་"
+    },
+    {
+      "wylie": "'bad pa gyis",
+      "unicode": "འབད་པ་གྱིས་"
+    },
+    {
+      "wylie": "'bad pa las byung ba",
+      "unicode": "འབད་པ་ལས་བྱུང་བ་"
+    },
+    {
+      "wylie": "'bad pa mdzod",
+      "unicode": "འབད་པ་མཛོད་"
+    },
+    {
+      "wylie": "'bad pa med",
+      "unicode": "འབད་པ་མེད་"
+    },
+    {
+      "wylie": "'bad pa med pa",
+      "unicode": "འབད་པ་མེད་པ་"
+    },
+    {
+      "wylie": "'bad pa med par",
+      "unicode": "འབད་པ་མེད་པར་"
+    },
+    {
+      "wylie": "'bad pa med par thar par 'gyur",
+      "unicode": "འབད་པ་མེད་པར་ཐར་པར་འགྱུར་"
+    },
+    {
+      "wylie": "'bad pa mi mnga' bar ye shes 'jug pa",
+      "unicode": "འབད་པ་མི་མངའ་བར་ཡེ་ཤེས་འཇུག་པ་"
+    },
+    {
+      "wylie": "'bad pa rtsom pa",
+      "unicode": "འབད་པ་རྩོམ་པ་"
+    }
+  ],
+  "relatedTermsCount": 21,
+  "definitionsCount": 18
+}

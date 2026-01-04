@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-01-04T14:05:08.401Z",
+  "searchTerm": {
+    "wylie": "'a na yang",
+    "unicode": "འ་ན་ཡང་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༡༡༡༤?",
+    "Jaeschke_Scan": "༥༢༥",
+    "JimValby": "although་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'a na yang",
+      "unicode": "འ་ན་ཡང་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 3
+}

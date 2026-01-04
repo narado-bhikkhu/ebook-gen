@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-01-04T14:05:08.747Z",
+  "searchTerm": {
+    "wylie": "'bab byed",
+    "unicode": "འབབ་བྱེད་"
+  },
+  "definitions": {
+    "JimValby": "milch་cow་",
+    "LaineAbbreviations": "Also་abbrewiated་ཨས {འབབྱེད}. (Source: Dzongkha་abbreviations)",
+    "NegiSkt": "• kri. nipatati་lo.ko.༡༧༡༧;\n\n• wi. vāhakaḥ — {འོད་ཟེར་ལྔ་ཡི་རང་བཞིན་སྲོག།}། {དཀྱིལ་འཁོར་ལྔ་ནི་འབབ་བྱེད་པ།།} pañcaraśmimayaḥ prāṇaḥ pañcamaṇḍalavāhakaḥ\n vi.pra.༦༢ཁ།༤.༡༡༠; vāhinī — {ཁྱིམ་གྱི་རྩ་བཅུ་གཅིག་པ་དཀྱིལ་འཁོར་ལྔ་འབབ་པར་བྱེད་པ} ekādaśīñca་rāśināḍīṃ pañcamaṇḍalavāhinīm་vi.pra.༢༤༩ཁ།༢.༦༣།།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bab byed",
+      "unicode": "འབབ་བྱེད་"
+    },
+    {
+      "wylie": "'bab byed lus ldan",
+      "unicode": "འབབ་བྱེད་ལུས་ལྡན་"
+    },
+    {
+      "wylie": "'bab byed pa",
+      "unicode": "འབབ་བྱེད་པ་"
+    }
+  ],
+  "relatedTermsCount": 3,
+  "definitionsCount": 3
+}

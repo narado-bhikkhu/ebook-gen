@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-01-04T14:05:08.487Z",
+  "searchTerm": {
+    "wylie": "'ang",
+    "unicode": "འང་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༡༡༡༤?",
+    "Hopkins-Skt1992": "[LCh]api་",
+    "Hopkins-Skt2015": "[LCh]api་",
+    "Hopkins2015": "བུཏ་; ewen་; ཨལསོ་; ever་; ཨོར་",
+    "Jaeschke_Scan": "༥༢༥",
+    "JimValby": "ཨལསོ་, too་, ཨས་ཝེལལ་, བུཏ་, ཡེཏ་, still་, newertheless་, ཨེབེ༹ན་if་, ཨེབེ༹ན་, ཨེབེ༹ན་including་, though་, although་, ever་, soever་, SA་ཀྱང་",
+    "NegiSkt": "གང་ལའང་kwacit་",
+    "RangjungYeshe": "ewen. Syn {ཀྱང་ཡང} [ཨུསེད་ཨཕ༹ཏེར་vowel་finals]",
+    "bod_yig_tshig_gter_rgya_mtsho": "{མིང་མཐའ་འ་དང་།} {མཐའ་མེད་གཉིས་སུ་སྦྱོར་བའི་རྒྱན་སྡུད་ཀྱི་སྒྲའི་རྐྱེན་ཞིག} {རིག་མ་མྱུར་པོའང་ཡིན་ལ།} {ཟབ་པོའང་ཡིན།} {རི་བོ་མཐོའང་ཤིང་ནགས་མི་འདུག} {མེ་མདའང་མ་རྒྱག་གྲིའང་མ་རྒྱག} {ཁྱེད་ནི་སྐྱེ་དགུ་ཀུན་ལ་མཉེན་གཤིན་པའི་བསམ་པ་དགེ་བ་ཅན་ཡིན་ནའང་།} {དེ་ལྟ་བུར་ཀུན་གྱིས་ཀྱང་དང་བ་མི་སྟོན་ནོ།།}",
+    "dag_tshig_gsar_bsgrigs-Tib": "ཀྱང་ལ་ལྟོས།",
+    "tshig-mdzod-chen-mo-Tib": "མིང་མཐའ་འ་དང་། མཐའ་མེད་གཉིས་སུ་སྦྱོར་བའི་རྒྱན་སྡུད་ཀྱི་སྒྲའི་རྐྱེན་ཞིག་འ་རིག་པ་མྱུར་པོའང་ཡིན་ལ། ཟབ་པོའང་ཡིན། རི་བོ་མཐོའང་ཤིང་ནགས་མི་འདུག་མེ་མདའང་མ་རྒྱག་གྲིའང་མ་རྒྱག་ཁྱེད་ནི་སྐྱེ་དགུ་ཀུན་ལ་མཉེན་གཤིན་པའི་བསམ་པ་དགེ་བ་ཅན་ཡིན་ནའང་། དེ་ལྟ་བུར་ཀུན་གྱིས་ཀྱང་དང་བ་མི་སྟོན་ནོ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ang",
+      "unicode": "འང་"
+    },
+    {
+      "wylie": "'ang 'ang",
+      "unicode": "འང་འང་"
+    },
+    {
+      "wylie": "'ang de",
+      "unicode": "འང་དེ་"
+    },
+    {
+      "wylie": "'ang ge",
+      "unicode": "འང་གེ་"
+    },
+    {
+      "wylie": "'ang gsang",
+      "unicode": "འང་གསང་"
+    },
+    {
+      "wylie": "'ang gu",
+      "unicode": "འང་གུ་"
+    },
+    {
+      "wylie": "'ang gu mdog",
+      "unicode": "འང་གུ་མདོག་"
+    },
+    {
+      "wylie": "'ang ka",
+      "unicode": "འང་ཀ་"
+    },
+    {
+      "wylie": "'ang ke",
+      "unicode": "འང་ཀེ་"
+    },
+    {
+      "wylie": "'ang ma yin",
+      "unicode": "འང་མ་ཡིན་"
+    },
+    {
+      "wylie": "'ang mi",
+      "unicode": "འང་མི་"
+    },
+    {
+      "wylie": "'ang pa",
+      "unicode": "འང་པ་"
+    },
+    {
+      "wylie": "'ang pan",
+      "unicode": "འང་པན་"
+    }
+  ],
+  "relatedTermsCount": 13,
+  "definitionsCount": 11
+}

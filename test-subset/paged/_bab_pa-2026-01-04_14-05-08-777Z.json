@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-01-04T14:05:08.780Z",
+  "searchTerm": {
+    "wylie": "'bab pa",
+    "unicode": "འབབ་པ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༩༡༧?",
+    "Hopkins-Skt1992": "prawaNa་; [C]pravahati་; [C]pravaNa་; [MSA]pata་; [C]prasrava་",
+    "Hopkins-Skt2015": "[C]prawahati་; [C]pravaṇa་; [MSA]pata་; [C]prasrava་",
+    "Hopkins-TibetanTenses2015": "འབབ། འབབས། བབ། བབས།",
+    "Hopkins-others'English2015": "{C}prone་ཏོ་; flowing་along་",
+    "Hopkins2015": "descend་; རཻན་; ཕ༹ློཝ་; ཕ༹ལལ་དོཝན་; mowe་downward་; slope་ཏོཝརད་",
+    "ITLR": "Sanskrit: nimna་<Word། Term། Phrase>\n\n\nཊིབེཏན་renderings་ཨོཕ༹་nimna:{གཞོལ་བ།}, {འབབ་པ།}\n\nnimna་, adj. (= Pali་ninna་; cf. ཨབྷི་nimna་; ཨིན་ཐིས་སེནསེ་once་ཨིན་Skt., pw་༧ App.), inclined་ཏོ་, བེནཏ་upon་, headed་ཕོ༹ར་; often་parallel་ཝིཐ་prawaṇa་ཨནད་prāgbhāra་, ཨས་final་ཨིན་cpds.: LV་༡༨༠.༡༦ viveka་ni°, -pravaṇa་, -prāg་bhāra་; Mv་iii.༦༢.༡༣ nirvāṇa་ni°, pra°, prāg°; iii.༦༡.༨, same་without་°nimna་; Mvy་༨༠༨ (རེཨད་sarvajñatā ni°);༥༡༦༣ (separate་word་, བུཏ་associated་ཝིཐ་ཐེ་other་ཏྭོ); Divy་༥༠.༡༢ བུདདྷ་ni° དྷརྨ་pravaṇā སམགྷ་prāg་bhārā; same་༨༠.༤; Av་i.༦༥.༣ -༤ etc. (cliché); apāya་ni°, prav°, -prāg° headed་ཕོ༹ར … , Divy་༩༥.༢༨; Av་i.༡༦.༡༧; དྷརྨ་nimnatā °pravaṇatā °prāgbhāratā Śikṣ༡༩༡.༨\n\nSee་ཐེ་ཕུ༹ལལ་ཨེནཏརཡ་ཨཏ:https:།། www.itlr.net། hwid:༢༧༤༧༤༥",
+    "IvesWaldo": "༡) ཕ༹ློཝ་;༢) གོ་དོཝན་;༣) mowe་downward་ཕོ༹ཨུར་descend་;༥) occur་;༦) arrive་;༧) windfall་",
+    "Jaeschke_Scan": "༤༡༨",
+    "JimValby": "ཕ༹ལལ་, (drop་, གོ་, ཕ༹ལལ) དོཝན་, descend་, alight་, dismount་, mowe་downward་, come་དོཝན་ཕ༹ྲོམ་, alight་, ཨིཏ་ཧས་come་དོཝན་ཏོ་ཐེ་ཏིམེ་ཨོཕ༹་",
+    "NegiSkt": "warta.; saka.; དབབ་པ་bhavi., བབས་པ་bhūta., བོབས་vidhau་",
+    "RangjungYeshe": "{འབབ་པ་, བབ་པ་, འབབ་པ་, བོབ} intr. w.; ft. ཨོཕ༹ {འབབ་པ}; intr. {འབབ་པ་, བབ་པ་, འབབ་པ} intr. v.; གོ་དོཝན་, flows་, ཏོ་move་downward་, ཏོ་descend་; descent་, ཅལམིཏཡ་; cascade་; ཏོ་alight (ཕ༹ྲོམ་ཧོརསེ)",
+    "Yoghacharabhumi-glossary": "prawaNa་; praghArita. པྲ། སྲུ:prasravanti།།། vRS:varSati།།། syand:syandanti་",
+    "bod_yig_tshig_gter_rgya_mtsho": "(༡) 〔{ཐ་མི་དད་པ}〕 {བབ་པ།} {འབབ་པ།།} --༡ --{སྟེང་ངམ་གོང་ནས་མར་ལྷུང་བ།} {ཁ་ཆར་འབབ་པ།} {ཁ་བ་རི་ལ་བབ་ནས།} {གངས་ཆུ་ཀླུང་ལ་བབ་བྱུང་།} {བྱ་ཤིང་རྩེར་བབ་པ།} - -༢ --{སླེབ་པ།} {དུས་ལ་བབ་པ།} {ཡིད་ལ་མི་འབབ་པ།} {ཆུ་རགས་གསར་བསྐྲུན་ཡོད་ན་ཆུ་ལོག་བབ་ཀྱང་མི་སྟོ།} {ལས་གླ་འབྲུ་ལ་བབ་པ།} (༢) {བབ་པ།} {འབབ་པ།} {བོབ།} - -༡ --{བཤོལ་བ།} {འགྲུལ་པ་ཚུགས་བབ་པ།} {རྟ་ལས་བབ་པ།} {རླངས་འཁོར་ལས་བབ་པ།} {ལ་རེ་ཐུར་རེ་མ་བརྒྱབ་ན།} {། བདེ་མོའི་ཐང་ལ་འབབ་མི་ཐུབ།} {། ང་གར་འགྲོ་ནམ་མཁའི་བྱ་རེད།} {། བྱ་གར་འབབ་རང་གི་ལག་ཡིན།} - -༢ --{ཡོང་སྒོ་དང་ཐོབ་ཆ།} {ཁྲལ་འབབ།} {ཡོང་འབབ།} {དབུལ་འབབ།} {འབྲུ་འབབ།}",
+    "tshig-mdzod-chen-mo-Tib": "༡. (ཐ་མི་དད་པ)༡། བབ་པ། འབབ་པ།།༡) སྟེང་ངམ་གོང་ནས་མར་ལྷུང་བ། ཁ་ཆར་འབབ་པ། ཁ་བ་རི་ལ་བབ་ནས་གངས་ཆུ་ཀླུང་ལ་བབ་བྱུང་། བྱ་ཤིང་རྩེར་བབ་པ།༢) སླེབ་པ། དུས་ལ་བབ་པ། ཡིད་ལ་མི་འབབ་པ། ཆུ་རགས་གསར་བསྐྲུན་ཡོད་ན་ཆུ་ལོག་བབ་ཀྱང་མི་སྟོ། ལས་གླ་འབྲུ་ལ་བབ་པ།༢། བབ་པ། འབབ་པ། བོབ།། བཤོལ་བ། འགྲུལ་པ་ཚུགས་བབ་པ། རྟ་ལས་བབ་པ། རླངས་འཁོར་ལས་བབ་པ། ལ་རེ་ཐུར་རེ་མ་བརྒྱབ་ན། བདེ་མོའི་ཐང་ལ་འབབ་མི་ཐུབ། ང་གར་འགྲོ་ནམ་མཁའི་བྱ་རེད། བྱ་གར་འབབ་རང་གི་ལག་ཡིན།༢. ཡོང་སྒོ་དང་ཐོབ་ཆ། ཁྲལ་འབབ། ཡོང་འབབ། དངུལ་འབབ། འབྲུ་འབབ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bab pa",
+      "unicode": "འབབ་པ་"
+    },
+    {
+      "wylie": "'bab pa can",
+      "unicode": "འབབ་པ་ཅན་"
+    }
+  ],
+  "relatedTermsCount": 2,
+  "definitionsCount": 15
+}

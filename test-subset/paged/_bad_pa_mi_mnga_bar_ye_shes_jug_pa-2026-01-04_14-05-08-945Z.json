@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-01-04T14:05:08.945Z",
+  "searchTerm": {
+    "wylie": "'bad pa mi mnga' bar ye shes 'jug pa",
+    "unicode": "འབད་པ་མི་མངའ་བར་ཡེ་ཤེས་འཇུག་པ་"
+  },
+  "definitions": {
+    "Hopkins-Skt1992": "[MSA]ayatnato་jJAna་prawRtteH་",
+    "Hopkins-Skt2015": "[MSA]ayatnato་jñāna་prawṛtteḥ",
+    "Hopkins2015": "effortlessly་engage་ཝིསྡོམ་; ཝིསྡོམ་ཝཧིཆ་engages་effortlessly (T)",
+    "IvesWaldo": "effortlessly་enter་ཨིནཏོ་ཝིསྡོམ་",
+    "Jaeschke_Scan": "༤༡༧?"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad pa mi mnga' bar ye shes 'jug pa",
+      "unicode": "འབད་པ་མི་མངའ་བར་ཡེ་ཤེས་འཇུག་པ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 5
+}

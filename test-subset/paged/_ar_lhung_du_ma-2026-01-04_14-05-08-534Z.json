@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-01-04T14:05:08.535Z",
+  "searchTerm": {
+    "wylie": "'ar lhung du ma",
+    "unicode": "འར་ལྷུང་དུ་མ་"
+  },
+  "definitions": {
+    "JimValby": "ཧད་wery་nearly་fallen་ཨིནཏོ་ཐེ་ཧནདས་ཨོཕ༹་ཐེ་enemy་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ar lhung du ma",
+      "unicode": "འར་ལྷུང་དུ་མ་"
+    },
+    {
+      "wylie": "'ar lhung du ma rgyag",
+      "unicode": "འར་ལྷུང་དུ་མ་རྒྱག་"
+    }
+  ],
+  "relatedTermsCount": 2,
+  "definitionsCount": 1
+}

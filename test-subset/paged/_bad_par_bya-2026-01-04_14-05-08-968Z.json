@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-01-04T14:05:08.969Z",
+  "searchTerm": {
+    "wylie": "'bad par bya",
+    "unicode": "འབད་པར་བྱ་"
+  },
+  "definitions": {
+    "Hopkins-Skt1992": "[MV](√yat): yatiSye་",
+    "Hopkins-Skt2015": "[MV](√yat): yatiṣye་",
+    "Hopkins2015": "ཝིལལ་striwe་; ཝིལལ་མཀེ་effort་",
+    "NegiSkt": "• kri. prayateta་— {གལ་ཏེ་ཚེས་བཅོ་ལྔ་ལ་བདག་གཅིག་པུ་དེ་དང་མི་ལྡན་པར་ཤེས་ན་འགྲོགས་པ་ཤེས་ལ་དྲང་པོར་འབད་པར་བྱའོ།།} swaṃ cedekamatadvantaṃ pañcadaśīṃ manyeta་sapremakaprāguṇye་prayateta་vi.sū.༥༨ཀ།༧༤; vyāyacchet་— {དེ་བཏང་བའི་ཕྱིར་སྔར་མི་འབད་པར་བྱའོ།།} pūrvamasya་mokṣāya་ན་vyāyaccheyuḥ vi.sū.༥༧ཁ།༧༢;\n\n• kṛ. prayatitavyaḥ — {དེ་བས་ན་བསམ་པ་དག་པར་བྱ་བ་ལ་འབད་པར་བྱའོ།།} ityāśayaśuddhau་prayatitavyam་jā.mā.༦༠ཁ།༧༠; yatnaḥ kāryaḥ — {དེ་བས་ན་ཁྲོ་བ་ཐུལ་བར་བྱ་བ་ལ་འབད་པར་བྱའོ།།} iti་krodhavinaye་yatnaḥ kāryaḥ jā.mā.༡༡༥ཀ།༡༣༤; vyāyantavyaḥ — {མ་བྱིན་པ་ལེན་པ་སྤང་བ་ལ་ཡང་འབད་པར་བྱ་སྟེ} adattādānasya་ཅ་prahāṇāya་vyāyantavyam་a.śa.༡༡༡ཀ།༡༠༡།།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad par bya",
+      "unicode": "འབད་པར་བྱ་"
+    },
+    {
+      "wylie": "'bad par bya ba",
+      "unicode": "འབད་པར་བྱ་བ་"
+    }
+  ],
+  "relatedTermsCount": 2,
+  "definitionsCount": 4
+}

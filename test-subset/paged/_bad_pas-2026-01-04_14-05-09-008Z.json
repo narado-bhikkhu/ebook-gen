@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-01-04T14:05:09.009Z",
+  "searchTerm": {
+    "wylie": "'bad pas",
+    "unicode": "འབད་པས་"
+  },
+  "definitions": {
+    "JimValby": "diligently་",
+    "NegiSkt": "yatnena་— {དྲན་པ་དང་ནི་ཤེས་བཞིན་དག།}། {ཐམས་ཅད་འབད་པས་སྲུངས་ཤིག} smṛtiṃ ཅ་samprajanyaṃ ཅ་sarwayatnena་rakṣata་\n\n bo.a.༡༡ཀ།༥.༢༣; yatnataḥ — {སྐྱེས་བུ་རྣམས་ཀྱི་རང་དབང་ཉིད།}། {ཁོ་བོས་འབད་པས་བཀག་པ་ཡིན།།} yatnataḥ pratiṣedhyā naḥ puruṣāṇāṃ svatantratā\n\n ta.sa.༨༣ཁ།༧༦༧; prayatnataḥ — {འཕགས་པ་ཀླུ་སྒྲུབ་ཀྱིས་མཛད་པའི།}། {གཉིས་པོའང་འབད་པས་བལྟ་བར་བྱ།།} paśyet … āryanāgārjunābaddhaṃ dvitīyaṃ ཅ་prayatnataḥ\n\n bo.a.༡༤ཁ།༥.༡༠༦།།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad pas",
+      "unicode": "འབད་པས་"
+    },
+    {
+      "wylie": "'bad pas 'gog pa",
+      "unicode": "འབད་པས་འགོག་པ་"
+    },
+    {
+      "wylie": "'bad pas bsgrub par bya ba",
+      "unicode": "འབད་པས་བསྒྲུབ་པར་བྱ་བ་"
+    },
+    {
+      "wylie": "'bad pas bsgrub par bya ba ma yin pa",
+      "unicode": "འབད་པས་བསྒྲུབ་པར་བྱ་བ་མ་ཡིན་པ་"
+    },
+    {
+      "wylie": "'bad pas chags bral bskyed pa",
+      "unicode": "འབད་པས་ཆགས་བྲལ་བསྐྱེད་པ་"
+    },
+    {
+      "wylie": "'bad pas kun brtags pa ma yin pa",
+      "unicode": "འབད་པས་ཀུན་བརྟགས་པ་མ་ཡིན་པ་"
+    },
+    {
+      "wylie": "'bad pas sgrub pa",
+      "unicode": "འབད་པས་སྒྲུབ་པ་"
+    },
+    {
+      "wylie": "'bad pas zhugs pa",
+      "unicode": "འབད་པས་ཞུགས་པ་"
+    }
+  ],
+  "relatedTermsCount": 8,
+  "definitionsCount": 2
+}

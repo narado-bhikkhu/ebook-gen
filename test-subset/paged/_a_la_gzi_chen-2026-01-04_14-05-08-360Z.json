@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-01-04T14:05:08.360Z",
+  "searchTerm": {
+    "wylie": "'a la gzi chen",
+    "unicode": "འ་ལ་གཟི་ཆེན་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༡༡༡༤?",
+    "JimValby": "ཨ་learned་lama་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'a la gzi chen",
+      "unicode": "འ་ལ་གཟི་ཆེན་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 2
+}

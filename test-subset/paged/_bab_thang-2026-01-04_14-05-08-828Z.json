@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-01-04T14:05:08.828Z",
+  "searchTerm": {
+    "wylie": "'bab thang",
+    "unicode": "འབབ་ཐང་"
+  },
+  "definitions": {
+    "IvesWaldo": "landing་ཕི༹ཨེལད་, airport་",
+    "Jaeschke_Scan": "༤༡༨?",
+    "JimValby": "airport་, སྟཏིཨོན་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bab thang",
+      "unicode": "འབབ་ཐང་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 3
+}

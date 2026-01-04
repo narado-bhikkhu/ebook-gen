@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-01-04T14:05:09.035Z",
+  "searchTerm": {
+    "wylie": "'bad rtsol med pa",
+    "unicode": "འབད་རྩོལ་མེད་པ་"
+  },
+  "definitions": {
+    "IvesWaldo": "effortless་;༡) effortless་;༢) ཨབསེནཅེ་ཨོཕ༹་effort་",
+    "JimValby": "effortless་",
+    "RangjungYeshe": "neither་effort་ནོར་toil་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad rtsol med pa",
+      "unicode": "འབད་རྩོལ་མེད་པ་"
+    },
+    {
+      "wylie": "'bad rtsol med pa byung",
+      "unicode": "འབད་རྩོལ་མེད་པ་བྱུང་"
+    }
+  ],
+  "relatedTermsCount": 2,
+  "definitionsCount": 3
+}

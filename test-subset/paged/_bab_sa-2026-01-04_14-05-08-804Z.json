@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-01-04T14:05:08.804Z",
+  "searchTerm": {
+    "wylie": "'bab sa",
+    "unicode": "འབབ་ས་"
+  },
+  "definitions": {
+    "IvesWaldo": "༡) པླཅེ་ཨོཕ༹་descent་;༢) པླཅེ་ཨོཕ༹་occurrence་;༣) སོཨུརཅེ་;༤) སྟཏིཨོན་, port [ཏྲཻན་plane་boat]",
+    "JimValby": "པླཅེ་ཨོཕ༹་landing་",
+    "bod_yig_tshig_gter_rgya_mtsho": "{མཐོ་ས་ནས་མར་འབབ་ས།} {གནམ་གྲུ་འབབ་ས།} {གྲུ་གཟིངས་འབབ་ས།} {ཞབས་བྲོ་གནམ་ལ་བཏེག་ཀྱང་འབབ་ས་ས་ལས་མེད།}",
+    "tshig-mdzod-chen-mo-Tib": "མཐོ་ས་ནས་མར་འབབ་ས། གནམ་གྲུ་འབབ་ས། གྲུ་གཟིངས་འབབ་ས། ཞབས་བྲོ་གནམ་ལ་བཏེག་ཀྱང་འབབ་ས་ས་ལས་མེད།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bab sa",
+      "unicode": "འབབ་ས་"
+    },
+    {
+      "wylie": "'bab sa sna len dang",
+      "unicode": "འབབ་ས་སྣ་ལེན་དང་"
+    }
+  ],
+  "relatedTermsCount": 2,
+  "definitionsCount": 4
+}

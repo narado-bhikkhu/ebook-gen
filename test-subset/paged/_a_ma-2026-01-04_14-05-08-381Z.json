@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-01-04T14:05:08.382Z",
+  "searchTerm": {
+    "wylie": "'a ma",
+    "unicode": "འ་མ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༡༡༡༤?",
+    "DanMartin": "ཨ་སྤེལླིང་ཕོ༹ར་ཨ་མ་, 'mother'་ཨུསེད་ཨིན་Zhi་བྱེད་Coll. IV་༡༥༩.༡༣།།",
+    "Jaeschke_Scan": "༥༢༥",
+    "JimValby": "བུཏ་; བུཏ་, ཡེཏ་, ཝེལལ་",
+    "RangjungYeshe": "བུཏ་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'a ma",
+      "unicode": "འ་མ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 5
+}

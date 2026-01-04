@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-01-04T14:05:08.431Z",
+  "searchTerm": {
+    "wylie": "'a yo",
+    "unicode": "འ་ཡོ་"
+  },
+  "definitions": {
+    "JimValby": "puppy་",
+    "bod_yig_tshig_gter_rgya_mtsho": "{ཁྱི་ཆུང་ངུའི་མིང་།}",
+    "dag_tshig_gsar_bsgrigs-Tib": "ཁྱི་ཆུང་ངུའི་མིང་།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'a yo",
+      "unicode": "འ་ཡོ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 3
+}

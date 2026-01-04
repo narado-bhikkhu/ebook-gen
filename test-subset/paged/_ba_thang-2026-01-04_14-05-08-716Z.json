@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-01-04T14:05:08.717Z",
+  "searchTerm": {
+    "wylie": "'ba' thang",
+    "unicode": "འབའ་ཐང་"
+  },
+  "definitions": {
+    "IvesWaldo": "{འབ་ཐང}། ཡུལེ་region་ET་",
+    "JimValby": "པླཅེ་ཨིན་ཁམས་",
+    "RangjungYeshe": "ཅོཨུནཏཡ་ཨིན་༢༡th་cent་ཊིབེཏ།།",
+    "bod_yig_tshig_gter_rgya_mtsho": "{ཁམས་ལྷོ་ཕྱོགས་ས་ཆ་ཞིག་གི་དེང་དུས་དཀར་མཛེས་བོད་རིགས་རང་སྐྱོང་ཁུལ་འབའ་ཐང་རྫོང་ཞེས་ཟེར།}",
+    "dag_tshig_gsar_bsgrigs-Tib": "ད་ལྟའི་སུ་ཁྲོན་ཞིང་ཆེན་དཀར་མཛེས་བོད་རིགས་རང་སྐྱོང་ཁུལ་གྱི་ས་ཆ་ཞིག་གི་མིང་།",
+    "tshig-mdzod-chen-mo-Tib": "རྫོང་ཞིག་སི་ཁྲོན་ཞིང་ཆེན་ཁོངས་དཀར་མཛེས་བོད་རིགས་རང་སྐྱོང་ཁུལ་གྱི་ནུབ་ངོས་དང་འབྲི་ཆུའི་ཤར་འགྲམ་དུ་ཡོད།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ba' thang",
+      "unicode": "འབའ་ཐང་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 6
+}

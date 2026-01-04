@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-01-04T14:05:08.978Z",
+  "searchTerm": {
+    "wylie": "'bad par byed pa",
+    "unicode": "འབད་པར་བྱེད་པ་"
+  },
+  "definitions": {
+    "Hopkins-Skt1992": "[MSA]wyAvasAyika་",
+    "Hopkins-Skt2015": "[MSA]wyāvasāyika་",
+    "Hopkins2015": "striwe་; striving་; མཀེ་effort་; མཀིང་effort་",
+    "IvesWaldo": "exert་༡self་",
+    "NegiSkt": "• kri. yatnaṃ karoti་— {བློ་བཟང་བདེ་གཤེགས་པ་རྣམས་ནི།}། {འབད་པ་བྱེད} sudhiyaḥ saugatā yatnaṃ kurwanti་ta.sa.༡༣༡ཀ།༡༡༡༥; yatnaḥ kriyate་— {ཁོ་བོ་ཅག་གིས་སླར་ཡང་ཆད་པར་འགྱུར་བའི་ཐམས་ཅད་མཁྱེན་པ་སེལ་བ་ལ་འབད་པར་བྱེད་པ་གང་ཡིན་པ} yo'asmābhirvakṣyamāṇo་bhūyaḥ sarvajñapuruṣaniṣedhāya་yatnaḥ kriyate་ta.pa.༢༦༡ཁ།༩༩༣; āyāsaḥ kriyate་— {གནས་མེད་ཉིད་ལ་འབད་འདི་བྱེད།།} asthāna་evāyamāyāsaḥ kriyate་ta.sa.༡༤ཁ།༡༦༦; udyamate་— {རབ་ཏུ་ཐར་བར་བྱ་ཕྱིར་འབད་པར་བྱེད།།} udyamate་pramokṣahetoḥ rā.pa.༢༣༤ཁ།༡༢༩; vyāyacchate་— {རྣམ་པར་g}.{ཡེང་བ་དང་ཐེ་ཚོམ་གྱི་གཉེན་པོ་ཡིད་ལ་བྱེད་པ་བསྒོམ་པ་ནི་གང་གི་ཚེ་འབད་པར་བྱེད།} {བརྩོན་འགྲུས་རྩོམ་པར་བྱེད་པ་ན་སྟེ} vikṣepasaṃśayaprātipakṣikamanaskārabhāvano་yadā vyāyacchate་vīryamārabhate་sū.vyā.༡༦༧ཀ།༥༨;\n\n• pā. vyāvasāyikaḥ, upāyabhedaḥ — {ཐབས་རྣམ་པ་བཞི} … {འདུན་པ་དང་རྩོལ་བ་དང་དད་པ་ནི་འབད་པར་བྱེད་པའི་ཐབས་ཏེ} caturvidha་upāyaḥ … chando་vyāyāmaḥ śraddhā vyāvasāyikaḥ upāyaḥ sū.vyā.༢༢༧ཀ།༡༣༧།།",
+    "Yoghacharabhumi-glossary": "ཨུཏ། sah:utsahate. wy་A-། ཡམ:vyAyacchate. vyA། ཡམ:vyAyacchate་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad par byed pa",
+      "unicode": "འབད་པར་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bad par byed pa yin",
+      "unicode": "འབད་པར་བྱེད་པ་ཡིན་"
+    }
+  ],
+  "relatedTermsCount": 2,
+  "definitionsCount": 6
+}

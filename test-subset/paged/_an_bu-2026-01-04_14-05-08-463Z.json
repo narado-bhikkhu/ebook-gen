@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-01-04T14:05:08.463Z",
+  "searchTerm": {
+    "wylie": "'an bu",
+    "unicode": "འན་བུ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༡༡༡༤?",
+    "DanMartin": "ངེད་ཅག་གམ་ཁོ་bo. Btsan་lha.. ངེད་ཅག་གམ་ཁོ་bo.༣༦༧ ཨཱིཨཱི་༡༢༦.༥. = nga. \\\"I.\\\" Kuijp (༡༩༨༦)༣༢. Occurs་ཨས་ཨན་unusual་pronoun་ཨིན་Samdo་ཨཱ་V་༡༧༡r.༡།།",
+    "JimValby": "SA་ངན་བུ་",
+    "RangjungYeshe": "ཨཱི་, མེ་",
+    "brda_dkrol_gser_gyi_me_long": "{ངེད་ཅག་གམ་ཁོ་བོ་ཞེས་པའི་དོན་ཏེ།} 《{བློ་སྦྱོང་ཉི་མའི་འོད་ཟེར་གྱི་བརྡ་དོན}》{ལས། འན་བུ་ནི་ངེད་ཅག་གམ་ཁོ་བོའོ།། ཞེས་གསུངས། དཔེར་ན།} 《{ཞུས་ལེན་ནོར་བུའི་ཕྲེང་བ}》{ལས། ཁྱེད་ཚོའི་རྟོག་པ་ལ་འན་བུས་ཁོང་འདེགས་མནོས་ཏེ། སྐབས་དོན་ལ་ཁོང་གིས་འན་བུ་བཏེག་འགྲོ་བ་ལགས། ཞེས་པ་ལྟ་བུའོ།།}",
+    "dag_tshig_gsar_bsgrigs-Tib": "ང་ཚོ་ཞེས་པའི་ཡུལ་སྐད་དམ་བརྡ་རྙིང་།",
+    "sgom_sde_tshig_mdzod_chen_mo": "བློ་སྦྱོང་",
+    "tshig-mdzod-chen-mo-Tib": "(ཡུལ) ངེད་དམ་ཁོ་བོ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'an bu",
+      "unicode": "འན་བུ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 8
+}

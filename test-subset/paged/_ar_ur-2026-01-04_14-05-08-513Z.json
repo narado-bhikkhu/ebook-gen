@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-01-04T14:05:08.513Z",
+  "searchTerm": {
+    "wylie": "'ar 'ur",
+    "unicode": "འར་འུར་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༡༡༡༤?",
+    "DanMartin": "Samdo་ཨཱ་V་༢༤༣r.༡. See་འར་མ་འུར་མ།།",
+    "Jaeschke_Scan": "༥༢༥",
+    "JimValby": "SA་འུར་འུར་",
+    "LaineAbbreviations": "Also་abbrewiated་ཨས {འརུ}. (Source: Dzongkha་abbreviations)",
+    "RangjungYeshe": "hurly་burly་",
+    "bod_yig_tshig_gter_rgya_mtsho": "{འ་རི་འུ་རིའི་བསྡུས་ཚིག}",
+    "dag_tshig_gsar_bsgrigs-Tib": "འ་འུར་གྱི་འབྲི་ཚུལ་གཞན།",
+    "tshig-mdzod-chen-mo-Tib": "འ་རི་འུ་རིའི་བསྡུས་ཚིག་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ar 'ur",
+      "unicode": "འར་འུར་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 9
+}

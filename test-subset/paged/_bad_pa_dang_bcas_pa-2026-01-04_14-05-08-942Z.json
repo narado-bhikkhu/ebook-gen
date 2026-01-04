@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-01-04T14:05:08.942Z",
+  "searchTerm": {
+    "wylie": "'bad pa dang bcas pa",
+    "unicode": "འབད་པ་དང་བཅས་པ་"
+  },
+  "definitions": {
+    "Hopkins-Skt1992": "[MSA]yatna་wattva་",
+    "Hopkins-Skt2015": "[MSA]yatna་wattva་",
+    "Hopkins2015": "ཝིཐ་exertion (T)",
+    "IvesWaldo": "effortful་",
+    "Jaeschke_Scan": "༤༡༧?",
+    "RangjungYeshe": "deliberate་, effortful་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad pa dang bcas pa",
+      "unicode": "འབད་པ་དང་བཅས་པ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 6
+}

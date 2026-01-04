@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-01-04T14:05:08.643Z",
+  "searchTerm": {
+    "wylie": "'ba' cha kha red 'bru",
+    "unicode": "འབའ་ཆ་ཁ་རེད་འབྲུ་"
+  },
+  "definitions": {
+    "Jaeschke_Scan": "༤༡༧?",
+    "JimValby": "ཅོསཏ་ཨོཕ༹་load་ཨོཕ༹་འབའ་ཆ་ཨིས་ཨ་ཁལ་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ba' cha kha red 'bru",
+      "unicode": "འབའ་ཆ་ཁ་རེད་འབྲུ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 2
+}

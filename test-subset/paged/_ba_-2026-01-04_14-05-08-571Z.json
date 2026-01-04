@@ -1,0 +1,355 @@
+{
+  "timestamp": "2026-01-04T14:05:08.577Z",
+  "searchTerm": {
+    "wylie": "'ba'",
+    "unicode": "འབའ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༩༡༧?",
+    "IvesWaldo": "༡) bleat་;༢) པླེདགེ་ཕོ༹ར་ཨན་unchanging་པྲོམིསེ་, ཅོནཏྲཅཏ་, written་ཨགྲེཨེམེནཏ་;༣) {འབའ} དིསྟྲིཅཏ། [if་༡ breaks་ཨ་ཅོནཏྲཅཏ་, འབའ་ཐཏ་ཨིས་ཨ་ཅཽསེ་ཨོཕ༹་establishing་ཐེ་པེནལཏཡ་specified]",
+    "Jaeschke_Scan": "༤༡༧",
+    "JimValby": "སེཨིཟུརེ་, distraint་, ལིཨབིལིཏཡ་ཨོཕ༹་paying་ཧིགྷེར་ཨིནཏེརེསཏ་, པླཅེ་ཨིན་ཁམས་",
+    "RangjungYeshe": "ཨ་དིསྟྲིཅཏ་ཨིན་ཊིབེཏ\n -- -\nBa་, walley་ཨིན་Domey་",
+    "Verbinator": "Present: {འབའ} CD་, DS་, TC.\nPast: {འབའ} [DS], TC.\nFuture: {འབའ} [DS], TC.\nImperatiwe: - TC.\nInvoluntary: TC.\nIntransitive: DS་, TC.\nMeaning:༡. ཊོ་bleat.༢. (ཨིན་Sikkim) ཊོ་བྲིང་, ཏོ་carry.༣. (ཅེནཏྲལ) ཊོ་ཅོམམིཏ་ཨདུལྟེརཡ (Ja) CD. ཊོ་མཀེ་ཐེ་སོཨུནད་ཨོཕ༹་ཨ་sheep་ཨོར་གོཨཏ་DS. (ཕོ༹ར་ཨ་sheep) ཊོ་speak་TC.\nNote:onomatopoeic་NWH།།",
+    "bod_yig_tshig_gter_rgya_mtsho": "(༡){ལུག་སྐད།} (༢){ཁས་བླངས་མི་འགྱུར་བའི་རྟེན།} {གན་རྒྱ་འབའ་ཅན་བཞག་ཡོད།} {གན་དོན་དང་འགལ་ན་འབའ་ཉེས་བཀའ་གང་གནང་སྒྲུབ་རྒྱུ།} (༣){མི་ལ་ལྐོག་བཤད་བྱེད་པའི་དོན་ཏེ།} {དཔེར་ན།} {ཁྱོད་རང་འགྲོ་ཚར་རྗེས་ཁོ་ཆོས་མང་པོ་འབའ་སོང་།} {ཁོ་ཚོས་ཁྱོད་ལ་འབའ་བཤའ་བྱེད་ཅིང་འདུག་ཅེས་པ་ལྟ་བུ་རྣམས་སོ།}",
+    "dag_tshig_gsar_bsgrigs-Tib": "༡. ཚོགས་པ་དང་མིའི་བར་དུ་བཞག་པའི་བརྩི་སྲུང་བྱེད་དགོས་པའི་ཆིངས་ཡིག་དང་སྒྲིག་ལམ་སོགས་ཀྱི་མིང་སྟེ། འབའ་ཡིག་རྒྱལ་གཅེས་འཕྲོད་བསྟེན་བྱེད་པའི་འབའ་བཞག་ལྟ་བུ།༢. མདོ་སྟོད་སྨད་ཀྱི་ལུང་ཚན་གཉིས་ཀྱི་མིང་སྟེ། མཚོ་སྔོན་གྱི་མང་འབའ་བྱ་གསུམ་ཞེས་པའི་འབའ་གཞུང་དང་མདོ་སྟོད་ཀྱི་འབའ་ལི་ཐང་གཉིས་ལ་ཟེར།༣. (བྱེད་མེད་ལས་ཚིག) ར་ལུག་དང་བྱི་ལས་སྐད་འབྱིན་པ་སྟེ། འབའ་སྒྲ་གྲགས། ལུག་འབའ། བྱི་ལ་འབའ་ཞེས་པ་ལྟ་བུ།",
+    "dung-dkar-tshig-mdzod-chen-mo-Tib": "དེ་སྔའི་བོད་ས་གནས་སྲིད་གཞུང་གིས་ཁྲིམས་ལུགས་ཐོག་གཉན་འབེབས་བྱས་དོན་དུ། ཁ་གཏད་ཕྱོགས་གཉིས་བར་དཔང་པོ་ཡོད་པའི་གན་རྒྱ་བཞག་ཟིན་རྗེས་དེ་དང་འགལ་བའི་བྱ་སྤྱོད་བྱུང་ན་འབའ་ཉེས་ཞེས་པ་གན་རྒྱའི་ནང་དོན་དང་འགལ་མཁན་གྱི་མི་དེར་དངུལ་གྱི་ཉེས་ཆད་གཅོད་ཀྱི་ཡོད། དེ་ལ་ཉེས་པ་ཆེ་ཆུང་རིམ་པ་བཅུ་གསུམ་ཡོད་པའི་ནང་ནས་འདིར་ཉེས་ཆད་མཐོ་ཤོས་ཨང་དང་པོ་དང་། དམའ་ཤོས་ཨང་བཅུ་གསུམ་པ་གཉིས་དཔེ་མཚོན་དུ་བཀོད་ན། ཁྲིམས་འདེགས་ཨང་དང་པོར། ཁ་བཏགས་ནང་མཛོད་ལེགས་པ (རིན་སྲང་༢༨།) སྨན་རྩེ་རྙིང་པ་ཡུག་གཅིག (རིན་སྲང་༡༣།) གོས་ཆེན་རྒྱན་བཞི་ཁ་ཉི་ཤུ་ཐམ་པ་ཡོད་པ་ཡུག་གཅིག (རིན་སྲང་༣༣།) རྒྱ་ཟབ་ཡུག་གསུམ (རིན་སྲང་༡༡༣།) ལ་དྭ་ལེགས་པ་ཁ་དྲུག་ཡོད་པ་ཡུག་གཅིག (རིན་སྲང་༡༥།) ཇ་ཆུང་བྱུགས་འཁོར་དྲུག་ལ་ཁལ་ལྔ་དང་ཉག་ལྔ་ལོངས་པ། (རིན་སྲང་༡༠༡༣།) རས་ཆེན་ཡུག་གཅིག (རིན་སྲང་༡༢།) སྨྱུག་གུའི་རིན་སྲང་༢༩བཅས་བསྡོམས་སྲུང་བརྒྱད་བཅུ་རྒྱ་གཉིས་དང་ཞོ་གསུམ་སྐར་ཕྱེད་བདུན་དྲུག། ཁྲིམས་འདེགས་ཨང་བཅུ་གསུམ་པར། ཁ་བཏགས (རིན་སྲུང་༠༥།) སྨན་རྩེ (རིན་སྲང་༡༣༥།) ལ་དྭ་ཡུག་གསུམ (རིན་སྲང་༠༩།) ཀ་དན་སྒྲིམ་མ་ཡུག་གཅིག (རིན་དངུལ་སྲང་༠༡༥།) སྣག་ཚ་རིན་སྲིང་༠༧།) སྨྱུ་གུའི་རིན་སྲང་༠༡།) ཁྱོན་སྲང་གསུམ་སྐར་ཕྱེད་བརྒྱད་ཐོབ་ཀྱི་ཡོད། ཁྲིམས་འདེབས་རིམ་པ་སོ་སོའི་དངུལ་འབབ་ཐོབ་ཆེ་ཆུང་གི་གནས་ཚུལ་ཞིབ་པར་དེ་སྔོན་བོད་ས་གནས་སྲིད་གཞུང་གི་གཤེར་ཁང་ལས་ཁུངས་ཀྱི་ཁྲིམས་འདེབས་དེབ་ནང་གསལ་བས་དེར་གཟིགས་",
+    "tshig-mdzod-chen-mo-Tib": "༡) ལུག་སྐད།༢) ཁས་བླངས་མི་འགྱུར་བའི་རྟེན། གན་རྒྱ་འབའ་ཅན་བཞག་ཡོད། གན་དོན་དང་འགལ་ན་འབའ་ཉེས་བཀའ་གང་གནང་སྒྲུབ་རྒྱུ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ba'",
+      "unicode": "འབའ་"
+    },
+    {
+      "wylie": "'ba' 'ba'",
+      "unicode": "འབའ་འབའ་"
+    },
+    {
+      "wylie": "'ba' 'ded gtsang sgrub",
+      "unicode": "འབའ་འདེད་གཙང་སྒྲུབ་"
+    },
+    {
+      "wylie": "'ba' 'dzar",
+      "unicode": "འབའ་འཛར་"
+    },
+    {
+      "wylie": "'ba' 'gal",
+      "unicode": "འབའ་འགལ་"
+    },
+    {
+      "wylie": "'ba' 'gan",
+      "unicode": "འབའ་འགན་"
+    },
+    {
+      "wylie": "'ba' 'jog",
+      "unicode": "འབའ་འཇོག་"
+    },
+    {
+      "wylie": "'ba' ba",
+      "unicode": "འབའ་བ་"
+    },
+    {
+      "wylie": "'ba' bo",
+      "unicode": "འབའ་བོ་"
+    },
+    {
+      "wylie": "'ba' bo can",
+      "unicode": "འབའ་བོ་ཅན་"
+    },
+    {
+      "wylie": "'ba' byi",
+      "unicode": "འབའ་བྱི་"
+    },
+    {
+      "wylie": "'ba' bzhag pa",
+      "unicode": "འབའ་བཞག་པ་"
+    },
+    {
+      "wylie": "'ba' cha",
+      "unicode": "འབའ་ཆ་"
+    },
+    {
+      "wylie": "'ba' cha ba",
+      "unicode": "འབའ་ཆ་བ་"
+    },
+    {
+      "wylie": "'ba' cha gtong",
+      "unicode": "འབའ་ཆ་གཏོང་"
+    },
+    {
+      "wylie": "'ba' cha kha red 'bru",
+      "unicode": "འབའ་ཆ་ཁ་རེད་འབྲུ་"
+    },
+    {
+      "wylie": "'ba' cha mkhan",
+      "unicode": "འབའ་ཆ་མཁན་"
+    },
+    {
+      "wylie": "'ba' cha ru khag",
+      "unicode": "འབའ་ཆ་རུ་ཁག་"
+    },
+    {
+      "wylie": "'ba' cha'i lud",
+      "unicode": "འབའ་ཆའི་ལུད་"
+    },
+    {
+      "wylie": "'ba' chi",
+      "unicode": "འབའ་ཆི་"
+    },
+    {
+      "wylie": "'ba' chos sde dgon",
+      "unicode": "འབའ་ཆོས་སྡེ་དགོན་"
+    },
+    {
+      "wylie": "'ba' dam",
+      "unicode": "འབའ་དམ་"
+    },
+    {
+      "wylie": "'ba' dar",
+      "unicode": "འབའ་དར་"
+    },
+    {
+      "wylie": "'ba' dgon",
+      "unicode": "འབའ་དགོན་"
+    },
+    {
+      "wylie": "'ba' dngul",
+      "unicode": "འབའ་དངུལ་"
+    },
+    {
+      "wylie": "'ba' gan",
+      "unicode": "འབའ་གན་"
+    },
+    {
+      "wylie": "'ba' gser srang",
+      "unicode": "འབའ་གསེར་སྲང་"
+    },
+    {
+      "wylie": "'ba' gzhu",
+      "unicode": "འབའ་གཞུ་"
+    },
+    {
+      "wylie": "'ba' ho",
+      "unicode": "འབའ་ཧོ་"
+    },
+    {
+      "wylie": "'ba' ji",
+      "unicode": "འབའ་ཇི་"
+    },
+    {
+      "wylie": "'ba' khen",
+      "unicode": "འབའ་ཁེན་"
+    },
+    {
+      "wylie": "'ba' khug",
+      "unicode": "འབའ་ཁུག་"
+    },
+    {
+      "wylie": "'ba' khug dngul blug snod kyi khug ma rgyas spros can zhig 'ba' khug khab shubs",
+      "unicode": "འབའ་ཁུག་དངུལ་བླུག་སྣོད་ཀྱི་ཁུག་མ་རྒྱས་སྤྲོས་ཅན་ཞིག་འབའ་ཁུག་ཁབ་ཤུབས་"
+    },
+    {
+      "wylie": "'ba' khug khab shubs",
+      "unicode": "འབའ་ཁུག་ཁབ་ཤུབས་"
+    },
+    {
+      "wylie": "'ba' la dkar 'dzoms",
+      "unicode": "འབའ་ལ་དཀར་འཛོམས་"
+    },
+    {
+      "wylie": "'ba' le 'bol le",
+      "unicode": "འབའ་ལེ་འབོལ་ལེ་"
+    },
+    {
+      "wylie": "'ba' lung",
+      "unicode": "འབའ་ལུང་"
+    },
+    {
+      "wylie": "'ba' mdo mtshams khang",
+      "unicode": "འབའ་མདོ་མཚམས་ཁང་"
+    },
+    {
+      "wylie": "'ba' mo",
+      "unicode": "འབའ་མོ་"
+    },
+    {
+      "wylie": "'ba' pa",
+      "unicode": "འབའ་པ་"
+    },
+    {
+      "wylie": "'ba' po",
+      "unicode": "འབའ་པོ་"
+    },
+    {
+      "wylie": "'ba' ra ba rgyal mtshan dpal bzang",
+      "unicode": "འབའ་ར་བ་རྒྱལ་མཚན་དཔལ་བཟང་"
+    },
+    {
+      "wylie": "'ba' ra ba rgyal mtshan dpal bzang po",
+      "unicode": "འབའ་ར་བ་རྒྱལ་མཚན་དཔལ་བཟང་པོ་"
+    },
+    {
+      "wylie": "'ba' ra brag dkar",
+      "unicode": "འབའ་ར་བྲག་དཀར་"
+    },
+    {
+      "wylie": "'ba' ra dkar brgyud kyi chos spyod",
+      "unicode": "འབའ་ར་དཀར་བརྒྱུད་ཀྱི་ཆོས་སྤྱོད་"
+    },
+    {
+      "wylie": "'ba' re 'bo re",
+      "unicode": "འབའ་རེ་འབོ་རེ་"
+    },
+    {
+      "wylie": "'ba' re 'bur re",
+      "unicode": "འབའ་རེ་འབུར་རེ་"
+    },
+    {
+      "wylie": "'ba' re bkra shis rgya mtsho",
+      "unicode": "འབའ་རེ་བཀྲ་ཤིས་རྒྱ་མཚོ་"
+    },
+    {
+      "wylie": "'ba' rgun",
+      "unicode": "འབའ་རྒུན་"
+    },
+    {
+      "wylie": "'ba' rgya",
+      "unicode": "འབའ་རྒྱ་"
+    },
+    {
+      "wylie": "'ba' rgyug",
+      "unicode": "འབའ་རྒྱུག་"
+    },
+    {
+      "wylie": "'ba' rom bka' brgyud",
+      "unicode": "འབའ་རོམ་བཀའ་བརྒྱུད་"
+    },
+    {
+      "wylie": "'ba' rom dar ma dbang phyug",
+      "unicode": "འབའ་རོམ་དར་མ་དབང་ཕྱུག་"
+    },
+    {
+      "wylie": "'ba' rom dgon pa",
+      "unicode": "འབའ་རོམ་དགོན་པ་"
+    },
+    {
+      "wylie": "'ba' rom pa dar ma dbang phyug",
+      "unicode": "འབའ་རོམ་པ་དར་མ་དབང་ཕྱུག་"
+    },
+    {
+      "wylie": "'ba' rom pa dar ma dbang phyug 'phan yul du rus mda' khar bar 'khrungs",
+      "unicode": "འབའ་རོམ་པ་དར་མ་དབང་ཕྱུག་འཕན་ཡུལ་དུ་རུས་མདའ་ཁར་བར་འཁྲུངས་"
+    },
+    {
+      "wylie": "'ba' sa ka",
+      "unicode": "འབའ་ས་ཀ་"
+    },
+    {
+      "wylie": "'ba' sam lha lung",
+      "unicode": "འབའ་སམ་ལྷ་ལུང་"
+    },
+    {
+      "wylie": "'ba' sam sman mar rdo rje pha lam",
+      "unicode": "འབའ་སམ་སྨན་མར་རྡོ་རྗེ་ཕ་ལམ་"
+    },
+    {
+      "wylie": "'ba' sel",
+      "unicode": "འབའ་སེལ་"
+    },
+    {
+      "wylie": "'ba' sgra",
+      "unicode": "འབའ་སྒྲ་"
+    },
+    {
+      "wylie": "'ba' sha",
+      "unicode": "འབའ་ཤ་"
+    },
+    {
+      "wylie": "'ba' shag",
+      "unicode": "འབའ་ཤག་"
+    },
+    {
+      "wylie": "'ba' shang",
+      "unicode": "འབའ་ཤང་"
+    },
+    {
+      "wylie": "'ba' shod dgon",
+      "unicode": "འབའ་ཤོད་དགོན་"
+    },
+    {
+      "wylie": "'ba' shog",
+      "unicode": "འབའ་ཤོག་"
+    },
+    {
+      "wylie": "'ba' skad",
+      "unicode": "འབའ་སྐད་"
+    },
+    {
+      "wylie": "'ba' skyogs",
+      "unicode": "འབའ་སྐྱོགས་"
+    },
+    {
+      "wylie": "'ba' song",
+      "unicode": "འབའ་སོང་"
+    },
+    {
+      "wylie": "'ba' thang",
+      "unicode": "འབའ་ཐང་"
+    },
+    {
+      "wylie": "'ba' yig",
+      "unicode": "འབའ་ཡིག་"
+    },
+    {
+      "wylie": "'ba' zhig",
+      "unicode": "འབའ་ཞིག་"
+    },
+    {
+      "wylie": "'ba' zhig gi don",
+      "unicode": "འབའ་ཞིག་གི་དོན་"
+    },
+    {
+      "wylie": "'ba' zhig gis",
+      "unicode": "འབའ་ཞིག་གིས་"
+    },
+    {
+      "wylie": "'ba' zhig kho na'am rkyang rkyang",
+      "unicode": "འབའ་ཞིག་ཁོ་ནའམ་རྐྱང་རྐྱང་"
+    },
+    {
+      "wylie": "'ba' zhig mngon dga' zhing",
+      "unicode": "འབའ་ཞིག་མངོན་དགའ་ཞིང་"
+    },
+    {
+      "wylie": "'ba' zhig pa",
+      "unicode": "འབའ་ཞིག་པ་"
+    },
+    {
+      "wylie": "'ba' zhig pa dgu bcu'i nang gses",
+      "unicode": "འབའ་ཞིག་པ་དགུ་བཅུའི་ནང་གསེས་"
+    },
+    {
+      "wylie": "'ba' zhig po",
+      "unicode": "འབའ་ཞིག་པོ་"
+    },
+    {
+      "wylie": "'ba' zhig tu",
+      "unicode": "འབའ་ཞིག་ཏུ་"
+    },
+    {
+      "wylie": "'ba' zhig tu gyur pa",
+      "unicode": "འབའ་ཞིག་ཏུ་གྱུར་པ་"
+    },
+    {
+      "wylie": "'ba' zhig tu ma zad pa",
+      "unicode": "འབའ་ཞིག་ཏུ་མ་ཟད་པ་"
+    },
+    {
+      "wylie": "'ba' zhig tu zad",
+      "unicode": "འབའ་ཞིག་ཏུ་ཟད་"
+    }
+  ],
+  "relatedTermsCount": 83,
+  "definitionsCount": 10
+}

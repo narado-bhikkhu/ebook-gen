@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-01-04T14:05:08.455Z",
+  "searchTerm": {
+    "wylie": "'ab pa",
+    "unicode": "འབ་པ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༡༡༡༤?",
+    "Jaeschke_Scan": "༥༢༥",
+    "JimValby": "bark་, མཀེ་ཨཏ་ཨ་པེརསོན་ཨོར་ཨནིམལ་",
+    "RangjungYeshe": "ཏོ་bark་",
+    "bod_yig_tshig_gter_rgya_mtsho": "〔{ཡུལ}〕{ཁྱིས་རྨུག་པའམ་ཟུག་པ།}",
+    "tshig-mdzod-chen-mo-Tib": "(ཡུལ) ཁྱིས་རྨུག་པའམ་ཟུག་པ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ab pa",
+      "unicode": "འབ་པ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 6
+}

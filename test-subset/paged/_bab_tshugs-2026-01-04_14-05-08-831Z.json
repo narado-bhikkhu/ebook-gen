@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-01-04T14:05:08.831Z",
+  "searchTerm": {
+    "wylie": "'bab tshugs",
+    "unicode": "འབབ་ཚུགས་"
+  },
+  "definitions": {
+    "IvesWaldo": "༡) སྟཏིཨོན་;༢) stop་;༣) པླཅེ་ཨོཕ༹་path་སིགན། torch་",
+    "JimValby": "སྟཏིཨོན་, stop་; སྟཏིཨོན་, stop་, ཏེརྨིནུས་",
+    "RangjungYeshe": "སྟཏིཨོན་, stop་",
+    "TibTermProject": "(མིལ་,ཏྲནས) དེཔོཏ {མེ་འཁར་རམ་རླངས་འཁར་འདུ་ས།}",
+    "bod_yig_tshig_gter_rgya_mtsho": "{ཕྱོགས་མགྲོན་གྱི་འབབ་ཡུལ།} {མེ་འཁོར་འབབ་ཚུགས།} {རླངས་འཁོར་འབབ་ཚུགས།}",
+    "tshig-mdzod-chen-mo-Tib": "ཕྱོགས་མགྲོན་གྱི་འབབ་ཡུལ། མེ་འཁོར་འབབ་ཚུགས། རླངས་འཁོར་འབབ་ཚུགས།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bab tshugs",
+      "unicode": "འབབ་ཚུགས་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 6
+}

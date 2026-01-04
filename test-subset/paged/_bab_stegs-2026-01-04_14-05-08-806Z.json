@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-01-04T14:05:08.807Z",
+  "searchTerm": {
+    "wylie": "'bab stegs",
+    "unicode": "འབབ་སྟེགས་"
+  },
+  "definitions": {
+    "IvesWaldo": "platform་ཕོ༹ར་dismounting་ཕ༹ྲོམ་ཨ་ཧོརསེ་, སྟཏིཨོན་platform [ཏྲཻན་etc.]",
+    "Jaeschke_Scan": "༤༡༨?",
+    "JimValby": "access་ཨོར་descent་ཏོ་ཐེ་ཝཏེར་, steps་ལེཨདིང་ཏོ་ཨ་bathing་པླཅེ་",
+    "NegiSkt": "tīrtham་— {བདག་ལྷ་དང་བཅས་པའི་འཇིག་རྟེན་གྱི་མིག་དང} … {གྲུ་དང་ངོགས་དང་འབབ་སྟེགས་དང} … {འགྱུར} ahaṃ sadewakasya་lokasya་cakṣurbhaveyam … kūlaṃ naustīrtham་śi.sa.༡༤༢ཀ།༡༣༦།།",
+    "bod_yig_tshig_gter_rgya_mtsho": "{རྟ་ལས་འབབ་སའི་སྟེགས་བུ།} {རྟ་ལས་འབབ་དུས་འབབ་སྟེགས་ཀྱི་སྟེང་དུ་བབས་པ།}",
+    "tshig-mdzod-chen-mo-Tib": "རྟ་ལས་འབབ་སའི་སྟེགས་བུ། རྟ་ལས་འབབ་དུས་འབབ་སྟེགས་ཀྱི་སྟེང་དུ་བབས་པ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bab stegs",
+      "unicode": "འབབ་སྟེགས་"
+    },
+    {
+      "wylie": "'bab stegs bde ba",
+      "unicode": "འབབ་སྟེགས་བདེ་བ་"
+    },
+    {
+      "wylie": "'bab stegs mgon po",
+      "unicode": "འབབ་སྟེགས་མགོན་པོ་"
+    }
+  ],
+  "relatedTermsCount": 3,
+  "definitionsCount": 6
+}

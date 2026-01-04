@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-01-04T14:05:08.458Z",
+  "searchTerm": {
+    "wylie": "'al 'ol",
+    "unicode": "འལ་འོལ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༡༡༡༤?",
+    "DanMartin": "Samdo་ཨཱ་V་༡༢༡r.༡. སབ་sob. Btsan་ལྷ།།",
+    "JimValby": "flimsy་, random་, confused་, unconnected་, irregular་, unreal་, hazy་",
+    "LaineAbbreviations": "Also་abbrewiated་ཨས {འལོ}. (Source: Dzongkha་abbreviations)",
+    "RangjungYeshe": "Syn་འལ་མ་འོལ། སང་སེང་། ཡད་ཡུད་; སེཨེ {འ་ལེ་འོལ་ལེ}",
+    "RichardBarron": "{འལ་ལེ་འོལ་ལེ} wague། imprecise་",
+    "bod_yig_tshig_gter_rgya_mtsho": "རྒྱན་ཚིག་",
+    "brda_dkrol_gser_gyi_me_long": "{སབ་སོབ་ཀྱི་དོན་ལ་འཇུག་སྟེ།} 《{བོད་ཀྱི་བརྡ་སྐད་མིང་གཞི་གསལ་བར་སྟོན་པའི་བསྟན་བཅོས}》{ལས། འལ་འོལ་སབ་སོབ། ཅེས་གསུངས། དཔེར་ན།} 《{ལམ་ཡིག་ཆོས་ཀྱི་འབྱུང་གནས}》{ལས། དེ་ཐམས་ཅད་ལ་འལ་འོལ་མིན། ཁ་ཙམ་ཚིག་ཙམ་མིན། དབང་པོ་གཏད་ནས་གུས་པར་ཞུས། ཞེས་པ་ལྟ་བུའོ།།}",
+    "dag_tshig_gsar_bsgrigs-Tib": "གཡེང་ཞིང་བག་མེད་པའི་རྣམ་པ་སྟེ། འལ་འོལ་ངང་ནས་ལམ་ནོར་ལ་མ་འགྲོ་ལྟ་བུ། ཁ་སྐད་དུ་འ་ལེ་འོལ་ལེ་ཟེར་བ་དང་དོན་འདྲ་སྟེ། སློབ་སྦྱོང་བྱེད་ན་དཔེ་ཆར་འ་ལེ་འོལ་ལེ་ཙམ་བལྟས་པས་མི་ཆོག་ལྟ་བུ།",
+    "tshig-mdzod-chen-mo-Tib": "འལ་ལེ་འོལ་ལེའི་བསྡུས་ཚིག་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'al 'ol",
+      "unicode": "འལ་འོལ་"
+    },
+    {
+      "wylie": "'al 'ol phar 'gyangs",
+      "unicode": "འལ་འོལ་ཕར་འགྱངས་"
+    }
+  ],
+  "relatedTermsCount": 2,
+  "definitionsCount": 10
+}

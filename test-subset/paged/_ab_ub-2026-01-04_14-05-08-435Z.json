@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-01-04T14:05:08.436Z",
+  "searchTerm": {
+    "wylie": "'ab 'ub",
+    "unicode": "འབ་འུབ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༡༡༡༤?",
+    "JimValby": "not་definite་, nothing་conclusiwe་, not་ཨིན་ཤཔེ་",
+    "bod_yig_tshig_gter_rgya_mtsho": "{གཅིག་ཆོད་མིན་པ།} {འབ་འུབ་མ་བསྡུས་པ།}",
+    "dag_tshig_gsar_bsgrigs-Tib": "གཅིག་ཆོད་མིན་པ་སྟེ། འབ་འུབ་ཀྱི་ངང་ནས་སོང་ན་ལམ་མགོ་འཁོར་ལྟ་བུ། ཁ་སྐད་དུ་འ་བེ་འུབ་བེ་ཟེར་བ་དང་འདྲ།",
+    "tshig-mdzod-chen-mo-Tib": "གཅིག་ཆོད་མིན་པ། འབ་འུབ་མ་བསྡུས་པ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ab 'ub",
+      "unicode": "འབ་འུབ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 5
+}

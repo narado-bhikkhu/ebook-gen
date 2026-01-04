@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-01-04T14:05:08.894Z",
+  "searchTerm": {
+    "wylie": "'bad med",
+    "unicode": "འབད་མེད་"
+  },
+  "definitions": {
+    "Berzin": "effortless་",
+    "Hopkins-Skt1992": "[MSA]ayatna་",
+    "Hopkins-Skt2015": "[MSA]ayatna་",
+    "Hopkins2015": "nonstriwing་; ནོན་striving་; ནོན་effort་",
+    "IvesWaldo": "effortless་; effortless[ness]",
+    "JimValby": "ནོ་need་ཏོ་striwe་ཕོ༹ར་, without་exertion་",
+    "LaineAbbreviations": "Also་abbrewiated་ཨས {འབེཾད}. (Source: Dzongkha་abbreviations)",
+    "NegiSkt": "= {འབད་པ་མེད་པ།}",
+    "RangjungYeshe": "effortless(ly); effortless་, -ness་",
+    "RichardBarron": "effortless་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad med",
+      "unicode": "འབད་མེད་"
+    },
+    {
+      "wylie": "'bad med du",
+      "unicode": "འབད་མེད་དུ་"
+    },
+    {
+      "wylie": "'bad med kyi ngang",
+      "unicode": "འབད་མེད་ཀྱི་ངང་"
+    },
+    {
+      "wylie": "'bad med lhun grub",
+      "unicode": "འབད་མེད་ལྷུན་གྲུབ་"
+    },
+    {
+      "wylie": "'bad med lhun grub tu mdzad pa gsum",
+      "unicode": "འབད་མེད་ལྷུན་གྲུབ་ཏུ་མཛད་པ་གསུམ་"
+    },
+    {
+      "wylie": "'bad med lhun gyis grub pa",
+      "unicode": "འབད་མེད་ལྷུན་གྱིས་གྲུབ་པ་"
+    },
+    {
+      "wylie": "'bad med ngang 'byung",
+      "unicode": "འབད་མེད་ངང་འབྱུང་"
+    },
+    {
+      "wylie": "'bad med pa",
+      "unicode": "འབད་མེད་པ་"
+    },
+    {
+      "wylie": "'bad med par",
+      "unicode": "འབད་མེད་པར་"
+    }
+  ],
+  "relatedTermsCount": 9,
+  "definitionsCount": 10
+}

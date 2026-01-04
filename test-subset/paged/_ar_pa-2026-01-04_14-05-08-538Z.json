@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-01-04T14:05:08.538Z",
+  "searchTerm": {
+    "wylie": "'ar pa",
+    "unicode": "འར་པ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༡༡༡༤?",
+    "JimValby": "ཨ་lot་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ar pa",
+      "unicode": "འར་པ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 2
+}

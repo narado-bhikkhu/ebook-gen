@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-01-04T14:05:08.915Z",
+  "searchTerm": {
+    "wylie": "'bad na",
+    "unicode": "འབད་ན་"
+  },
+  "definitions": {
+    "Hopkins-Skt1992": "[C]wyAyacchati་",
+    "Hopkins-Skt2015": "[C]wyāyacchati་",
+    "Hopkins-others'English2015": "{C}struggle་; makes་ཨན་effort་; exert་oneself་",
+    "Hopkins2015": "when་ཨོནེ་striwes་; when་ཧེ་strives་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad na",
+      "unicode": "འབད་ན་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 4
+}

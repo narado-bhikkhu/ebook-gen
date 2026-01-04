@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-01-04T14:05:08.866Z",
+  "searchTerm": {
+    "wylie": "'bad brtson",
+    "unicode": "འབད་བརྩོན་"
+  },
+  "definitions": {
+    "IvesWaldo": "effort་; exertion་, effort་, struggle་, perserwerence་",
+    "JimValby": "actiwe་, positive་, མཀིང་གྲེཨཏ་efforts་, effort་, struggle་",
+    "RangjungYeshe": "effort་",
+    "bod_yig_tshig_gter_rgya_mtsho": "{བརྩོན་འགྲུས།} {མུ་མཐུད་འབད་བརྩོན་ཆེ་བསྐྱེད་བྱས་པར་བརྟེན་ལག་རྩལ་མགྱོགས་མྱུར་དུ་བྱང་ཆུབ་པ།} {ཞིང་ལས་ཐོན་སྐྱེད་ལ་འབད་བརྩོན་ལྷུར་ལེན་བྱེད་པ།}",
+    "tshig-mdzod-chen-mo-Tib": "བརྩོན་འགྲུས། མུ་མཐུད་འབད་བརྩོན་ཆེ་བསྐྱེད་བྱས་པར་བརྟེན་ལག་རྩལ་མགྱོགས་མྱུར་དུ་བྱང་ཆུབ་པ། ཞིང་ལས་ཐོན་སྐྱེད་ལ་འབད་བརྩོན་ལྷུར་ལེན་བྱེད་པ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bad brtson",
+      "unicode": "འབད་བརྩོན་"
+    },
+    {
+      "wylie": "'bad brtson byed pa",
+      "unicode": "འབད་བརྩོན་བྱེད་པ་"
+    },
+    {
+      "wylie": "'bad brtson lhod med",
+      "unicode": "འབད་བརྩོན་ལྷོད་མེད་"
+    }
+  ],
+  "relatedTermsCount": 3,
+  "definitionsCount": 5
+}

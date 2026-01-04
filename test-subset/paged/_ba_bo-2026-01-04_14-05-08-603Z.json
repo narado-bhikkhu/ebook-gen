@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-01-04T14:05:08.604Z",
+  "searchTerm": {
+    "wylie": "'ba' bo",
+    "unicode": "འབའ་བོ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༩༡༧?",
+    "IvesWaldo": "༡) ཧོལེ་, གཔ་;༢) cawe་;༣) cavern་",
+    "Jaeschke_Scan": "༤༡༧",
+    "JimValby": "ཧོལེ་, cawe་, cavern་",
+    "RangjungYeshe": "༡) ཧོལེ་, cawe་, cavern.༢) སེཨེ {འབའ་རེ་འབོ་རེ}",
+    "bod_yig_tshig_gter_rgya_mtsho": "{དབུག་ཁུང་།}"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ba' bo",
+      "unicode": "འབའ་བོ་"
+    },
+    {
+      "wylie": "'ba' bo can",
+      "unicode": "འབའ་བོ་ཅན་"
+    }
+  ],
+  "relatedTermsCount": 2,
+  "definitionsCount": 6
+}

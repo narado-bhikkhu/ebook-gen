@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-01-04T14:05:08.579Z",
+  "searchTerm": {
+    "wylie": "'ba' 'gan",
+    "unicode": "འབའ་འགན་"
+  },
+  "definitions": {
+    "Jaeschke_Scan": "༤༡༧?",
+    "JimValby": "ཨགྲེཨེམེནཏ་, ཅོནཏྲཅཏ་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ba' 'gan",
+      "unicode": "འབའ་འགན་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 2
+}

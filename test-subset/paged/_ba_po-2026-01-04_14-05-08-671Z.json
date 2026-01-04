@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-01-04T14:05:08.671Z",
+  "searchTerm": {
+    "wylie": "'ba' po",
+    "unicode": "འབའ་པོ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༩༡༧?",
+    "IvesWaldo": "༡) magician་;༢) sorcerer་;༣) conjurer་",
+    "Jaeschke_Scan": "༤༡༧",
+    "JimValby": "magician་, sorcerer་, SA་དབའ་བ་",
+    "RangjungYeshe": "magician་, sorcerer་, conjurer་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ba' po",
+      "unicode": "འབའ་པོ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 5
+}

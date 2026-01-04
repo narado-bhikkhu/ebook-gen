@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-01-04T14:05:09.045Z",
+  "searchTerm": {
+    "wylie": "'bag 'bog",
+    "unicode": "འབག་འབོག་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༩༡༦?",
+    "IvesWaldo": "hillock་",
+    "Jaeschke_Scan": "༤༡༧",
+    "JimValby": "hillock་; unewen་, slight་elevation་, hillock་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'bag 'bog",
+      "unicode": "འབག་འབོག་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 4
+}

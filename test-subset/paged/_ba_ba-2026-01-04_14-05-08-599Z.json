@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-01-04T14:05:08.599Z",
+  "searchTerm": {
+    "wylie": "'ba' ba",
+    "unicode": "འབའ་བ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༩༡༧?",
+    "IvesWaldo": "༡) bleat་;༢) བྲིང་;༣) ཅརརཡ་",
+    "Jaeschke_Scan": "༤༡༧",
+    "JimValby": "bleat་, བྲིང་, ཅརརཡ་, ཅོམམིཏ་ཨདུལྟེརཡ་",
+    "RangjungYeshe": "{འབའ་བ་, འབའ་བ་, འབའ་བ} intr. w.;༡) ཏོ་bleat.༢) ཏོ་བྲིང་, ཅརརཡ་",
+    "bod_yig_tshig_gter_rgya_mtsho": "〔{ཐ་མི་དད་པ}〕 {ལུག་སྐད་འདོན་པ།} {རྩྭ་ཐང་སྟེང་དུ་ལུག་འབའ་བཞིན་ཡོད་པ།}",
+    "tshig-mdzod-chen-mo-Tib": "(ཐ་མི་དད་པ) ལུག་སྐད་འདོན་པ། རྩྭ་ཐང་སྟེང་དུ་ལུག་འབའ་བཞིན་ཡོད་པ།"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'ba' ba",
+      "unicode": "འབའ་བ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 7
+}

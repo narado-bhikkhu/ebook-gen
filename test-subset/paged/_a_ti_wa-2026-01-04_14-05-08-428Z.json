@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-01-04T14:05:08.428Z",
+  "searchTerm": {
+    "wylie": "'a ti wa",
+    "unicode": "འ་ཏི་ཝ་"
+  },
+  "definitions": {
+    "ChandraDas_Scan": "༡༡༡༤?",
+    "Jaeschke_Scan": "༥༢༥",
+    "JimValby": "turn་ཨ་somersault་, tumble་ower་, རོལལ་",
+    "RangjungYeshe": "ཏོ་perform་somersaults་, ཏོ་tumble་ower་, ཏོ་རོལལ་"
+  },
+  "relatedTerms": [
+    {
+      "wylie": "'a ti wa",
+      "unicode": "འ་ཏི་ཝ་"
+    }
+  ],
+  "relatedTermsCount": 1,
+  "definitionsCount": 4
+}
