@@ -3,6 +3,7 @@ package main
 import (
 	"archive/zip"
 	"encoding/json"
+	"encoding/base64"
 	"flag"
 	"fmt"
 	"io"
@@ -717,6 +718,16 @@ func (eg *EbookGenerator) GenerateHTML(terms []TermData) error {
 func (eg *EbookGenerator) buildHTML(terms []TermData, progressCallback func()) string {
 	var html strings.Builder
 
+	// Try to read the embedded Tibetan font and encode as base64 for @font-face
+	fontFace := ""
+	if fontData, ferr := ioutil.ReadFile(filepath.Join(filepath.Dir(eg.inputDir), "DDC_Uchen-webfont.woff")); ferr == nil {
+		b64 := base64.StdEncoding.EncodeToString(fontData)
+		fontFace = fmt.Sprintf("@font-face { font-family: 'DDC Uchen'; src: url('data:font/woff;base64,%s') format('woff'); }", b64)
+	} else if fontData, ferr := ioutil.ReadFile("DDC_Uchen-webfont.woff"); ferr == nil {
+		b64 := base64.StdEncoding.EncodeToString(fontData)
+		fontFace = fmt.Sprintf("@font-face { font-family: 'DDC Uchen'; src: url('data:font/woff;base64,%s') format('woff'); }", b64)
+	}
+
 	// HTML header with embedded CSS
 	html.WriteString(`<!DOCTYPE html>
 <html>
@@ -726,120 +737,118 @@ func (eg *EbookGenerator) buildHTML(terms []TermData, progressCallback func()) s
 <style>
 `)
 
-	// Embed CSS (similar to EPUB but adapted for single page)
-	html.WriteString(`
-@font-face {
-  font-family: 'DDC Uchen';
-  src: url('DDC_Uchen-webfont.woff') format('woff');
-}
-
+		// Write CSS: include embedded font if available, otherwise reference local font file
+		if fontFace != "" {
+				html.WriteString(fontFace + "\n")
+		}
+		html.WriteString(`
 body {
-  font-family: Georgia, serif;
-  line-height: 1.6;
-  margin: 2em;
-  text-rendering: optimizeLegibility;
-  max-width: none;
+	font-family: Georgia, serif;
+	line-height: 1.6;
+	margin: 2em;
+	text-rendering: optimizeLegibility;
+	max-width: none;
 }
 
 h1 {
-  font-size: 2.2em;
-  margin-top: 1em;
-  margin-bottom: 0.3em;
-  color: #333;
-  page-break-after: avoid;
+	font-size: 2.2em;
+	margin-top: 1em;
+	margin-bottom: 0.3em;
+	color: #333;
+	page-break-after: avoid;
 }
 
 .term-entry {
-  margin-bottom: 2em;
-  page-break-inside: avoid;
+	margin-bottom: 2em;
+	page-break-inside: avoid;
 }
 
 .term-title {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-  color: #333;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.3em;
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
+	color: #333;
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 0.3em;
 }
 
 h2 {
-  font-size: 1.3em;
-  margin-top: 1em;
-  margin-bottom: 0.3em;
-  color: #555;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 0.2em;
+	font-size: 1.3em;
+	margin-top: 1em;
+	margin-bottom: 0.3em;
+	color: #555;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 0.2em;
 }
 
 .definition {
-  margin-left: 1.5em;
-  margin-bottom: 0.8em;
-  page-break-inside: avoid;
+	margin-left: 1.5em;
+	margin-bottom: 0.8em;
+	page-break-inside: avoid;
 }
 
 .dict-name {
-  font-weight: bold;
-  color: #666;
-  margin-bottom: 0.3em;
+	font-weight: bold;
+	color: #666;
+	margin-bottom: 0.3em;
 }
 
 .related-terms {
-  margin-left: 1.5em;
-  margin-bottom: 1em;
+	margin-left: 1.5em;
+	margin-bottom: 1em;
 }
 
 .related-terms ul {
-  margin: 0.5em 0;
-  padding-left: 1.5em;
+	margin: 0.5em 0;
+	padding-left: 1.5em;
 }
 
 .related-terms li {
-  margin-bottom: 0.2em;
+	margin-bottom: 0.2em;
 }
 
 .metadata {
-  font-size: 0.9em;
-  color: #888;
-  margin-top: 0.5em;
-  border-top: 1px solid #eee;
-  padding-top: 0.3em;
+	font-size: 0.9em;
+	color: #888;
+	margin-top: 0.5em;
+	border-top: 1px solid #eee;
+	padding-top: 0.3em;
 }
 
 .unicode {
-  font-family: 'DDC Uchen', Arial Unicode MS, Arial, sans-serif;
-  font-size: 1.1em;
+	font-family: 'DDC Uchen', Arial Unicode MS, Arial, sans-serif;
+	font-size: 1.1em;
 }
 
 .tib {
-  font-family: 'DDC Uchen', Arial Unicode MS, Arial, sans-serif;
-  font-size: 1.1em;
+	font-family: 'DDC Uchen', Arial Unicode MS, Arial, sans-serif;
+	font-size: 1.1em;
 }
 
 .wylie {
-  font-family: monospace;
-  color: #666;
-  font-size: 0.9em;
+	font-family: monospace;
+	color: #666;
+	font-size: 0.9em;
 }
 
 .title-page {
-  text-align: center;
-  page-break-after: always;
-  margin-bottom: 3em;
+	text-align: center;
+	page-break-after: always;
+	margin-bottom: 3em;
 }
 
 .title-page h1 {
-  font-size: 3em;
-  margin-bottom: 0.5em;
+	font-size: 3em;
+	margin-bottom: 0.5em;
 }
 
 .title-page .author {
-  font-size: 1.5em;
-  color: #666;
-  margin-top: 1em;
+	font-size: 1.5em;
+	color: #666;
+	margin-top: 1em;
 }
 `)
 
-	html.WriteString(`
+		html.WriteString(`
 </style>
 </head>
 <body>
